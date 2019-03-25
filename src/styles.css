@@ -588,43 +588,34 @@ Custom theme
 @media only screen and (min-width:1200px) and (max-width: 2000px) {
     .theme-ux {
         background-image: url(./assets/images/desktop/wallpaper-ux.png);
-        background-size: cover;
         background-repeat: no-repeat;
     }
     .theme-brand {
         background-image: url(./assets/images/desktop/Fondo-03.png) !important;
-        background-size: cover;
-        background-position: left;
         background-repeat: no-repeat;
     }
     .theme-visual-design {
         background-image: url(./assets/images/desktop/fondo-visual.png);
         background-repeat: no-repeat;
-        background-size: cover;
     }
     .theme-realtime {
         background-image: url(./assets/images/desktop/Fondo-backend.png);
-        background-size: cover;
         background-repeat: no-repeat;
     }
     .theme-adword {
         background-image: url(./assets/images/desktop/abstract-adword.png);
-        background-size: cover;
         background-repeat: no-repeat;
     }
     .theme-web-design {
         background-image: url(./assets/images/desktop/bg-webdesign.png);
-        background-size: cover;
         background-repeat: no-repeat;
     }
     .theme-mkt {
         background-image: url(./assets/images/desktop/bg-mkt.png);
-        background-size: cover;
         background-repeat: no-repeat;
     }
     .theme-app2 {
         background-image: url(./assets/images/desktop/bg-app.png);
-        background-size: cover;
         background-repeat: no-repeat;
     }
     .theme-about {
@@ -656,43 +647,43 @@ Custom theme
 @media only screen and (min-width:768px) and (max-width:1024px) {
     .theme-ux {
         background-image: url(./assets/images/tablet/ux-bg.png);
-        background-size: cover;
+        background-size: 150%;
         background-repeat: no-repeat;
     }
     .theme-brand {
         background-image: url(./assets/images/tablet/brand-bg.png);
-        background-size: cover;
-        background-position: left;
+        background-size: 150%;
         background-repeat: no-repeat;
     }
     .theme-visual-design {
         background-image: url(./assets/images/tablet/fondo-vd.png);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 150%;
     }
     .theme-realtime {
         background-image: url(./assets/images/tablet/Fondo-08-08-08.png);
-        background-size: cover;
+        background-size: 150%;
         background-repeat: no-repeat;
     }
     .theme-adword {
         background-image: url(./assets/images/tablet/fondo-07.png);
-        background-size: cover;
+        background-size: 150%;
         background-repeat: no-repeat;
     }
     .theme-web-design {
         background-image: url(./assets/images/tablet/fondo-04.png);
-        background-size: cover;
+        background-size: 150%;
         background-repeat: no-repeat;
     }
     .theme-app2 {
         background-image: url(./assets/images/tablet/Fondo-06.png);
-        background-size: cover;
+        background-size: 150%;
         background-repeat: no-repeat;
+        /* background-position: bottom;*/
     }
     .theme-mkt {
         background-image: url(./assets/images/tablet/bg-mkt.png);
-        background-size: cover;
+        background-size: 150%;
         background-repeat: no-repeat;
     }
     .theme-about {

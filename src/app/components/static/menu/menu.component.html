@@ -1,5 +1,5 @@
 <!-- menu desktop -->
-<header *ngIf="!sticky" data-wow-duration="0.4s" #stickyMenu [ngClass]="{'offset-xl-2': !_menu.DarkMenu, 'offset-xl-5': _menu.DarkMenu, 'dark-menu-mg': _menu.DarkMenu}" class="d-none d-xl-block wow slideInDown">
+<header *ngIf="!sticky && !_menu.OnPopup" data-wow-duration="0.4s" #stickyMenu [ngClass]="{'offset-xl-2': !_menu.DarkMenu, 'offset-xl-5': _menu.DarkMenu, 'dark-menu-mg': _menu.DarkMenu}" class="d-none d-xl-block wow slideInDown">
     <div class="container">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-light color-visual-design text-center">
@@ -33,7 +33,7 @@
 </header>
 <!-- end menu desktop -->
 <!-- menu responsive overlay -->
-<header data-wow-duration="0.4s" *ngIf="!sticky" class="d-xl-none menu-digital wow slideInDown">
+<header data-wow-duration="0.4s" *ngIf="!sticky && !_menu.OnPopup" class="d-xl-none menu-digital wow slideInDown">
     <div class="container">
         <div class="container-fluid">
             <div class="space-60"></div>
@@ -69,7 +69,12 @@
     <nav id="nav-overlay" class="overlay-menu">
         <div class="container">
             <div class="row">
-                <div (click)="CloseOverlayMenu($event);" class="col-sm text-right close-menu pointer d-none d-md-block">
+                <div (click)="CloseOverlayMenu($event);" class="col-sm text-right close-menu pointer d-none d-md-block d-xl-none">
+                    <i class="material-icons font-55">
+                        highlight_off
+                     </i>
+                </div>
+                <div (click)="CloseOverlayMenu($event);" class="col-sm close-menu-desktop text-right pointer d-none d-xl-block">
                     <i class="material-icons font-55">
                         highlight_off
                      </i>
@@ -92,6 +97,9 @@
             <li (click)="ToRouting('cases');"><a class="nav-links pointer">Cases</a></li>
             <li (click)="ToRouting('contact');"><a class="nav-links pointer">Contact</a></li>
         </ul>
+        <div class="space-200 d-none d-xl-block"></div>
+        <div class="space-200 d-none d-md-block d-xl-none"></div>
+        <div class="space-15 d-none d-xl-block"></div>
         <div class="container">
             <div class="row">
                 <div class="col-sm text-center w-100">
@@ -102,12 +110,12 @@
             <div class="space-20 d-md-none"></div>
             <div class="row text-center offset-md-2 offset-2">
                 <div class="col-md-3 col-3 text-white">
-                    <a href="https://www.instagram.com/syftedesign/?hl=es" target="_blank">
+                    <a href="https://www.instagram.com/syftedesigns/?hl=es" target="_blank">
                         <img src="./assets/images/tablet/Iconos-11.png" alt="syfte_ig">
                     </a>
                 </div>
                 <div class="col-md-3 col-3 text-white">
-                    <a href="#" target="_blank">
+                    <a href="https://twitter.com/DesignsSyfte" target="_blank">
                         <img src="./assets/images/tablet/Iconos-12.png" alt="syfte_twitter">
                     </a>
                 </div>
@@ -123,7 +131,7 @@
 <!-- end menu responsive overlay -->
 
 <!-- sticky menu -->
-<header *ngIf="sticky" [ngClass]="{'sticky': sticky}">
+<header *ngIf="sticky && !_menu.OnPopup" [ngClass]="{'sticky': sticky}">
     <div class="container">
         <div class="row">
             <div class="col-sm text-center">

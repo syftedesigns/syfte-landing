@@ -24,7 +24,6 @@ export class AppComponent implements OnInit, OnDestroy {
     // you can subscribe to WOW observable to react when an element is revealed
     this.wowSubscription = this.wowService.itemRevealed$.subscribe(
       (item: any) => {
-        console.log(item);
         // do whatever you want with revealed element
       });
   }

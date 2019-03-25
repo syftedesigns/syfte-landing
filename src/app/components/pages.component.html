@@ -1,7 +1,9 @@
 <!-- menu -->
 <app-menu></app-menu>
 <!-- end menu -->
-<router-outlet></router-outlet>
+<div *ngIf="!_menu.OnPopup" class="wrapper">
+    <router-outlet></router-outlet>
+</div>
 <!-- contact -->
 <app-contact-history></app-contact-history>
 <!-- end contact -->

@@ -28,6 +28,12 @@
     }
 }
 
+@media only screen and (min-width: 1600px) {
+    .zone-position {
+        margin-top: 30%
+    }
+}
+
 @media only screen and (min-width: 1200px) {
     .attach-mg {
         margin-left: -15%

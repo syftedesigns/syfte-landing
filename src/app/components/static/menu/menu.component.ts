@@ -34,6 +34,7 @@ export class MenuComponent implements OnInit, AfterViewInit {
       $('.menu-digital').hide();
       $('.menu-overlay').toggleClass('open');
       $('.menu').toggleClass('open');
+      this._menu.OnPopup = true;
     });
   }
   CloseOverlayMenu(event: any): void  {
@@ -42,6 +43,7 @@ export class MenuComponent implements OnInit, AfterViewInit {
       $('.menu-digital').show();
       $('.menu-overlay').removeClass('open');
       $('.menu').removeClass('open');
+      this._menu.OnPopup = false;
     });
   }
   ToRouting(sendToUrl: string): void {
@@ -49,7 +51,10 @@ export class MenuComponent implements OnInit, AfterViewInit {
       $('.menu-digital').show();
       $('.menu-overlay').removeClass('open');
       $('.menu').removeClass('open');
+      $('html, body').animate({ scrollTop: 0 }, 300);
     });
     this._navigate.navigate([`/${sendToUrl}`]);
+    this.sticky = false;
+    this._menu.OnPopup = false;
   }
 }

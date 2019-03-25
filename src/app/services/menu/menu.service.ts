@@ -6,5 +6,6 @@ import { Injectable } from '@angular/core';
 export class MenuService {
 
   public DarkMenu: boolean = false;
+  public OnPopup: boolean = false;
   constructor() { }
 }
