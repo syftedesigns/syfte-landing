@@ -1,0 +1,61 @@
+@media only screen and (min-width:1200px) {
+    .margin-social {
+        position: relative;
+        left: 1.8em;
+    }
+    .arrows {
+        float: right;
+        position: relative;
+        left: 15em;
+        margin-top: 0.5em
+    }
+}
+
+@media only screen and (min-width: 1280px) and (max-width:1480px) {
+    .static-margin {
+        position: relative;
+        top: -1em;
+        z-index: 1000;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .point-mg {
+        position: relative;
+        left: 1.5em !important;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .mobile-mg {
+        margin-left: -2em;
+        position: relative;
+        left: 15%;
+    }
+}
+
+@media only screen and (min-width: 325px) and (max-width: 375px) {
+    .mobile-mg {
+        position: relative;
+        left: 1em;
+    }
+}
+
+@media only screen and (min-width: 380px) and (max-width: 480px) {
+    .mobile-mg {
+        position: relative;
+        left: 2em;
+    }
+}
+
+.pointer-left {
+    margin-left: 1em
+}
+
+.noActive {
+    color: #c9c7c7
+}
+
+.active {
+    color: #4c4c4c
+}

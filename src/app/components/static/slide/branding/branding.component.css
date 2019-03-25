@@ -1,0 +1,29 @@
+@media only screen and (min-width: 768px) and (max-width: 980px) {
+    .brand-employer {
+        position: relative;
+        left: -35%;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .brand-employer {
+        position: relative;
+        left: -38%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .margin-section {
+        margin-left: 2.5em
+    }
+    .bg-margin {
+        position: relative;
+        left: -1em;
+    }
+}
+
+@media only screen and (min-width: 1280px) and (max-width:1480px) {
+    #sticky {
+        display: none !important;
+    }
+}

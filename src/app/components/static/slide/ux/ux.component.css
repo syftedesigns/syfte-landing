@@ -1,0 +1,10 @@
+@media only screen and (max-width: 320px) {
+    .margin-section {
+        margin-left: 1em
+    }
+    .bg-margin {
+        margin-left: -2em
+    }
+}
+
+@media only screen and (min-width:1200px) and (max-width:1480px) {}

@@ -1,0 +1,54 @@
+.contact-title {
+    color: #383434 !important;
+}
+
+.contact-texts {
+    color: #6c6770 !important
+}
+
+.contact-buttons {
+    background-color: #4d5050
+}
+
+.bg-contact-landscape {
+    background-image: url(../../../assets/images/desktop/bg-contact2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.zone:hover {
+    -webkit-animation: pulse 1s;
+    animation: pulse 1s;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1480px) {
+    .zone-position {
+        position: relative;
+        left: -20%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .attach-mg {
+        margin-left: -15%
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .form-mat {
+        width: 100%
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .form-mat {
+        width: 80%
+    }
+    .bg-mobile {
+        background-image: url(../../../assets/images/mobile/bg-contact.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 3em
+    }
+}
