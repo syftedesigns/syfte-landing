@@ -31,3 +31,15 @@
         margin-left: -2em
     }
 }
+
+@media only screen and (min-width: 1440px) and (max-width: 1599px) {
+    .footer-ad {
+        margin-top: -2%
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .footer-ad {
+        margin-top: -5%
+    }
+}

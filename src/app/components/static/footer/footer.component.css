@@ -39,9 +39,19 @@ a:hover {
     }
 }
 
-@media only screen and (min-width: 1400px) and (max-width: 1480px) {
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
     .btn-newsletter {
         margin-left: 35%
+    }
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 1599px) {
+    .form-mg {
+        position: relative;
+        left: 5% !important;
+    }
+    .footer-mat {
+        width: 90% !important
     }
 }
 
@@ -65,6 +75,17 @@ a:hover {
     .social-fb {
         position: relative;
         left: -60%;
+    }
+    .form-mg {
+        position: relative;
+        left: 3%;
+    }
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1024px) {
+    .btn-tablet {
+        position: relative;
+        left: 10%;
     }
 }
 

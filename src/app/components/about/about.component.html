@@ -17,7 +17,7 @@
                     </article>
                 </div>
                 <div class="col-xl-6 wow bounceInRight">
-                    <img style="margin-top: -40%" src="./assets/images/desktop/maquina-03.png" alt="syfte_description_brand">
+                    <img class="machine" style="margin-top: -40%" src="./assets/images/desktop/maquina-03.png" alt="syfte_description_brand">
                 </div>
             </div>
         </section>
@@ -50,7 +50,7 @@
 <section class="d-none d-xl-block hover-hidden">
     <div class="row">
         <div class="col-xl-12 wow bounceInUp">
-            <img style="position: absolute; width: 30%;" src="./assets/images/desktop/Personajes-2-03.png" alt="syfte_slider">
+            <img class="circle-yellow" src="./assets/images/desktop/Personajes-2-03.png" alt="syfte_slider">
             <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
                 <div class="carousel-inner">
                     <div (mouseleave)="DisplaySliderArrow = false;" (mouseover)="DisplaySliderArrow = true" class="carousel-item active">
@@ -134,14 +134,14 @@
                 </a>
             </div>
         </div>
-        <div class="col-sm text-center">
+        <div style="position: relative; left: -1em;" class="col-sm text-center">
             <div class="space-50"></div>
             <h1 class="Aquatico-Regular font-36 about-title text-uppercase wow slideInRight">
                 Who is <br> syfte?
             </h1>
             <div class="space-15"></div>
             <article class="wow slideInRight">
-                <p class="LinotteLight font-16 text-color about-texts">
+                <p class="LinotteLight font-14 text-color about-texts">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
                     sem.
                 </p>
@@ -237,7 +237,7 @@
 <section class="d-md-none">
     <div class="container">
         <div class="row">
-            <div class="col text-center">
+            <div class="col-12 text-center">
                 <h1 class="Aquatico-Regular font-45 about-title text-uppercase wow slideInLeft">
                     What is <br>syfte?
                 </h1>
@@ -251,7 +251,7 @@
                     <img class="wow slideInLeft" src="./assets/images/mobile/mobile-employer.png" alt="syfte_employer">
                 </article>
             </div>
-            <div class="col text-center">
+            <div class="col-12 text-center">
                 <div class="space-20"></div>
                 <h1 class="Aquatico-Regular font-45 about-title text-uppercase wow slideInUp">
                     who is syfte?
@@ -332,4 +332,4 @@
     </div>
 </section>
 <!-- end mobile -->
-<div class="space-150"></div>
+<div class="space-150 d-none d-md-block"></div>

@@ -50,3 +50,9 @@
         display: none;
     }
 }
+
+@media only screen and (min-width: 1600px) {
+    .mg-debug {
+        margin-top: -13% !important
+    }
+}

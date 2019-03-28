@@ -26,6 +26,13 @@
     }
 }
 
+@media only screen and (min-width: 1485px) and (max-width: 1599px) {
+    .backend-figure {
+        width: 120%;
+        margin-top: -20%
+    }
+}
+
 @media only screen and (min-width: 1200px) {
     .case2 {
         position: relative;

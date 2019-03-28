@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SliderService } from 'src/app/services/slideshow/slider.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-button-slider',
@@ -21,7 +22,7 @@ export class ButtonSliderComponent implements OnInit {
   ChangePositionToLeft(currentPosition: number): void {
     // Si la posición es 0, esta en la primera pagina y pasamos a la ultima
     if (currentPosition === 0) {
-      this._paginator.currentPosition = (currentPosition + 6);
+      this._paginator.currentPosition = (currentPosition + 7);
       // Habilitamos la posición para que pueda cambiar de pagina
       for (const page of this._paginator._slideIems) {
         if (page.position === this._paginator.currentPosition) {
@@ -44,9 +45,10 @@ export class ButtonSliderComponent implements OnInit {
         }
       }
     }
+    $('html, body').animate({ scrollTop: 0 }, 300);
   }
   changePositionToRight(currentPosition: number): void {
-    if (this._paginator.currentPosition === 6) {
+    if (this._paginator.currentPosition === 7) {
       this._paginator.currentPosition = 0;
       for (const page of this._paginator._slideIems) {
         if (page.position === this._paginator.currentPosition) {
@@ -66,6 +68,7 @@ export class ButtonSliderComponent implements OnInit {
         page.Displayed = false;
       }
     }
+    $('html, body').animate({ scrollTop: 0 }, 300);
   }
   /* End slider arrows */
   /* Slider points */

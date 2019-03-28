@@ -45,7 +45,7 @@
                 </div>
                 <div class="col-sm col-3">
                     <a [routerLink]="['/']" class="navbar-brand">
-                        <img class="menu-brand offset-lg-4 offset-md-2 d-none d-md-block" title="Syfte Brand" src="./assets/images/desktop/logo-05.png" alt="Syfte_brand">
+                        <img *ngIf="!_menu.DarkMenu" class="menu-brand offset-lg-4 offset-md-2 d-none d-md-block" title="Syfte Brand" src="./assets/images/desktop/logo-05.png" alt="Syfte_brand">
                         <img id="brand" style="margin-top: -30%" class="d-md-none offset-3" src="./assets/images/mobile/Logo-10.png" alt="Syfte_brand">
                     </a>
                 </div>
@@ -87,8 +87,8 @@
             </div>
         </div>
         <ul class="one margin-one">
-            <li>
-                <a class="nav-links" href="#">
+            <li class="brand-overlay">
+                <a (click)="ToRouting('');" class="nav-links">
                     <img src="./assets/images/tablet/logo-white.png" alt="Syfte_brand">
                 </a>
             </li>
@@ -98,7 +98,7 @@
             <li (click)="ToRouting('contact');"><a class="nav-links pointer">Contact</a></li>
         </ul>
         <div class="space-200 d-none d-xl-block"></div>
-        <div class="space-200 d-none d-md-block d-xl-none"></div>
+        <div class="space-50 d-none d-md-block h-768 d-xl-none"></div>
         <div class="space-15 d-none d-xl-block"></div>
         <div class="container">
             <div class="row">

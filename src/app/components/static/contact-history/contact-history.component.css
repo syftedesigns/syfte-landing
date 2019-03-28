@@ -7,11 +7,23 @@ input::placeholder {
     color: white
 }
 
-.button-form {
+
+/*.button-form {
     background-color: #313435;
     -webkit-box-shadow: 1px 1px 1px 1px rgba(99, 100, 101, 1);
     -moz-box-shadow: 1px 1px 1px 1px rgba(99, 100, 101, 1);
     box-shadow: 1px 1px 1px 1px rgba(99, 100, 101, 1);
+}*/
+
+.button-form {
+    background-color: rgba(29, 31, 32, 0.3);
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(99, 100, 101, 1);
+    -moz-box-shadow: 1px 1px 1px 1px rgba(99, 100, 101, 1);
+    box-shadow: 1px 1px 1px 1px rgba(99, 100, 101, 1);
+}
+
+.button-form:hover {
+    background-color: rgba(99, 100, 101, 0.3);
 }
 
 .textarea {
@@ -48,6 +60,9 @@ input[type=number]::-webkit-outer-spin-button {
     .form-mat {
         width: 50%
     }
+    .btn-w {
+        width: 15% !important
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -63,5 +78,21 @@ input[type=number]::-webkit-outer-spin-button {
         background-image: url(../../../../assets/images/mobile/bg-contact.png) !important;
         background-size: cover;
         background-repeat: no-repeat;
+    }
+}
+
+@media only screen and (min-width: 1480px) and (max-width: 1599px) {
+    .visual-employer-mg {
+        margin-top: -7%;
+        position: absolute;
+        z-index: 10;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .visual-employer-mg {
+        margin-top: -7%;
+        position: absolute;
+        z-index: 10;
     }
 }

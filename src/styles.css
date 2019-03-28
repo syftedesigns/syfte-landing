@@ -629,7 +629,7 @@ Custom theme
     }
 }
 
-@media only screen and (min-width: 1280px) and (max-width: 1480px) {
+@media only screen and (min-width: 1280px) and (max-width: 1599px) {
     .theme-contact {
         background-image: url(./assets/images/desktop/contact-fixed.png) !important;
         background-size: cover !important;
@@ -691,12 +691,12 @@ Custom theme
         background-size: cover;
         background-repeat: no-repeat;
     }
-    /* .theme-contact {
-        background-image: url(./assets/images/tablet/contact-fixed.png);
+    .theme-contact {
+        background-image: url(./assets/images/tablet/bg-tablet-contact.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-    }*/
+    }
 }
 
 
@@ -858,6 +858,15 @@ Custom theme
 .my-contact-field.mat-form-field-appearance-legacy .mat-input-element {
     caret-color: #919191 !important;
     color: #919191 !important;
+}
+
+@media only screen and (min-width: 1600px) {
+    .hide-mg {
+        display: none !important
+    }
+    .footer-slider-mg {
+        margin-top: -2.5%
+    }
 }
 
 

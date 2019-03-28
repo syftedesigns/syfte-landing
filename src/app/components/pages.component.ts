@@ -31,7 +31,6 @@ export class PagesComponent implements OnInit {
         })
       ).subscribe(
         (resp: any) => {
-          console.log(resp);
           this.tags = resp;
           this.title.setTitle('Syfte | ' + resp.Title);
         }

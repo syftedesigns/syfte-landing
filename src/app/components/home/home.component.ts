@@ -35,14 +35,14 @@ export class HomeComponent implements OnInit, OnDestroy {
       const UxComponent = new SlideComponent('ux', false, 5);
       const BrandingComponent = new SlideComponent('branding', false, 6);
       const MarketingComponent = new SlideComponent('marketing', false, 7);
-      this._slide._slideIems.push(UxComponent);
-      this._slide._slideIems.push(MarketingComponent);
-      this._slide._slideIems.push(BrandingComponent);
-      this._slide._slideIems.push(AdwordComponent);
-      this._slide._slideIems.push(AppComponent);
-      this._slide._slideIems.push(BackendComponent);
-      this._slide._slideIems.push(VisualComponent);
       this._slide._slideIems.push(WebDesignComponent);
+      this._slide._slideIems.push(VisualComponent);
+      this._slide._slideIems.push(BackendComponent);
+      this._slide._slideIems.push(AppComponent);
+      this._slide._slideIems.push(AdwordComponent);
+      this._slide._slideIems.push(UxComponent);
+      this._slide._slideIems.push(BrandingComponent);
+      this._slide._slideIems.push(MarketingComponent);
       if (this._slide._slideIems.length >= 7 && this._slide._slideIems !== undefined) {
         resolve(true);
       }
