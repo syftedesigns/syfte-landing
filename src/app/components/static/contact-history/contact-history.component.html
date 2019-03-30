@@ -23,22 +23,22 @@
                     <form ngNativeValidate #formContact="ngForm" (ngSubmit)="sendForm(formContact);">
                         <div class="form-group">
                             <mat-form-field class="form-mat text-white LinotteRegular font-18 my-form-field">
-                                <input required type="text" matInput placeholder="Full Name">
+                                <input name="name" ngModel required type="text" matInput placeholder="Full Name">
                             </mat-form-field>
                         </div>
                         <div class="form-group">
                             <mat-form-field class="form-mat text-white LinotteRegular font-18 my-form-field">
-                                <input required type="number" matInput placeholder="Phone">
+                                <input name="phone" ngModel required type="number" matInput placeholder="Phone">
                             </mat-form-field>
                         </div>
                         <div class="form-group">
                             <mat-form-field class="form-mat text-white LinotteRegular font-18 my-form-field">
-                                <input required type="email" matInput placeholder="Email">
+                                <input name="email" ngModel required type="email" matInput placeholder="Email">
                             </mat-form-field>
                         </div>
                         <div class="form-group">
                             <mat-form-field class="form-mat text-white LinotteRegular font-18 my-form-field">
-                                <textarea required class="textarea" matInput placeholder="Message"></textarea>
+                                <textarea name="message" ngModel required class="textarea" matInput placeholder="Message"></textarea>
                             </mat-form-field>
                         </div>
                         <div class="form-group text-center">
@@ -69,12 +69,12 @@
         <div class="space-30"></div>
         <div class="row d-md-none">
             <div class="col text-center">
-                <form>
+                <form ngNativeValidate #formMobile="ngForm" (ngSubmit)="sendForm(formMobile);">
                     <div class="form-group">
                         <p>
                             <mat-form-field class="my-form-field text-white LinotteRegular font-18 mobile-input" appearance="outline">
                                 <mat-label class="text-white LinotteLight font-18">Full Name</mat-label>
-                                <input required type="text" matInput>
+                                <input ngModel name="name" required type="text" matInput>
                                 <mat-icon matSuffix>account_circle</mat-icon>
                             </mat-form-field>
                         </p>
@@ -83,7 +83,7 @@
                         <p>
                             <mat-form-field class="my-form-field text-white LinotteRegular font-18 mobile-input" appearance="outline">
                                 <mat-label class="text-white LinotteLight font-18">Phone</mat-label>
-                                <input required type="number" matInput>
+                                <input ngModel name="phone" required type="number" matInput>
                                 <mat-icon matSuffix>smartphone</mat-icon>
                             </mat-form-field>
                         </p>
@@ -92,7 +92,7 @@
                         <p>
                             <mat-form-field class="my-form-field text-white LinotteRegular font-18 mobile-input" appearance="outline">
                                 <mat-label class="text-white LinotteLight font-18">Email</mat-label>
-                                <input required type="email" matInput>
+                                <input ngModel name="email" required type="email" matInput>
                                 <mat-icon matSuffix>email</mat-icon>
                             </mat-form-field>
                         </p>
@@ -101,7 +101,7 @@
                         <p>
                             <mat-form-field class="my-form-field text-white LinotteRegular font-18 mobile-input" appearance="outline">
                                 <mat-label class="text-white LinotteLight font-18">Message</mat-label>
-                                <textarea required class="textarea" matInput></textarea>
+                                <textarea ngModel name="message" required class="textarea" matInput></textarea>
                                 <mat-icon matSuffix>insert_comment</mat-icon>
                             </mat-form-field>
                         </p>

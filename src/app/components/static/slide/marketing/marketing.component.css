@@ -46,3 +46,10 @@
         display: none !important;
     }
 }
+
+@media only screen and (max-height: 768px) {
+    .desktop-tablet-h {
+        position: relative;
+        top: -1.5em !important
+    }
+}

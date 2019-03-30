@@ -644,7 +644,7 @@ Custom theme
 
 /* Tablet & sm-desktop */
 
-@media only screen and (min-width:768px) and (max-width:1024px) {
+@media only screen and (min-width:768px) and (max-width:1180px) {
     .theme-ux {
         background-image: url(./assets/images/tablet/ux-bg.png);
         background-size: 150%;
@@ -754,6 +754,10 @@ Custom theme
 
 .theme-app {
     background-color: #ecedec;
+}
+
+.theme-thank {
+    background-color: #e5e4e2
 }
 
 .color-ux {

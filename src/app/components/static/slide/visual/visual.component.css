@@ -56,3 +56,10 @@
         margin-top: -13% !important
     }
 }
+
+@media only screen and (max-height: 768px) {
+    .desktop-tablet-h {
+        position: relative;
+        top: -3.5em
+    }
+}

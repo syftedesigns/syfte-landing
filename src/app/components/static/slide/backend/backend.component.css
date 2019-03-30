@@ -69,3 +69,19 @@
         margin-left: 110% !important
     }
 }
+
+@media only screen and (max-height: 800px) {
+    .footer-bck {
+        margin-top: -20.5% !important
+    }
+    .no-emp {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 768px) {
+    .desktop-tablet-h {
+        position: relative;
+        top: -3.5em
+    }
+}

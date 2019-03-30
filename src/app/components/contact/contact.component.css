@@ -89,3 +89,17 @@
         display: none;
     }
 }
+
+@media only screen and (min-width: 1024px) {
+    .spinner-mg {
+        position: relative;
+        left: 0.7em;
+    }
+}
+
+@media only screen and (min-width: 325px) and (max-width: 480px) {
+    .spinner-mg {
+        position: relative;
+        left: 0.7em;
+    }
+}

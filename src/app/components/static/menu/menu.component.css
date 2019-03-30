@@ -366,3 +366,15 @@ a.social-round-icon:hover {
         margin-top: -0.5em
     }
 }
+
+@media only screen and (max-height: 800px) {
+    .h-800 {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-height: 768px) {
+    .h-768 {
+        margin-top: -1em
+    }
+}

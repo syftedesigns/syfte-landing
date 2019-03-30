@@ -18,3 +18,17 @@
         margin-top: -0%
     }
 }
+
+@media only screen and (max-height: 800px) {
+    .arrow-800 {
+        position: relative;
+        top: 1em
+    }
+}
+
+@media only screen and (max-height: 768px) {
+    .desktop-tablet-h {
+        position: relative;
+        top: -1.5em !important
+    }
+}

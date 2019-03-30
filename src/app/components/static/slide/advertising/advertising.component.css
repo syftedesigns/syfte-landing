@@ -43,3 +43,10 @@
         margin-top: -5%
     }
 }
+
+@media only screen and (max-height: 800px) {
+    .arrow-800 {
+        position: relative;
+        top: -2.5em
+    }
+}

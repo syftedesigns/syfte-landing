@@ -5,8 +5,8 @@
     <router-outlet></router-outlet>
 </div>
 <!-- contact -->
-<app-contact-history></app-contact-history>
+<app-contact-history *ngIf="!_contact.FormSent"></app-contact-history>
 <!-- end contact -->
 <!-- footer -->
-<app-footer></app-footer>
+<app-footer *ngIf="!_contact.FormSent"></app-footer>
 <!-- end footer -->

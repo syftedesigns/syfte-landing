@@ -18,25 +18,25 @@
                     How can <br> we help you?
                 </h1>
                 <div class="space-20"></div>
-                <form class="wow slideInUp">
+                <form ngNativeValidate (ngSubmit)="ProposalData(formProposal);" #formProposal="ngForm" class="wow slideInUp">
                     <div class="form-group">
                         <mat-form-field class="form-mat my-contact-field LinotteRegular font-18">
-                            <input required matInput placeholder="Full Name">
+                            <input ngModel name="name" type="text" required matInput placeholder="Full Name">
                         </mat-form-field>
                     </div>
                     <div class="form-group">
                         <mat-form-field class="form-mat form-mat my-contact-field LinotteRegular font-18">
-                            <input required matInput placeholder="Email">
+                            <input type="email" name="email" ngModel required matInput placeholder="Email">
                         </mat-form-field>
                     </div>
                     <div class="form-group">
                         <mat-form-field class="form-mat form-mat my-contact-field LinotteRegular font-18">
-                            <input required matInput placeholder="Phone">
+                            <input type="number" name="phone" ngModel required matInput placeholder="Phone">
                         </mat-form-field>
                     </div>
                     <div class="form-group">
                         <mat-form-field class="form-mat form-mat my-contact-field LinotteRegular font-18">
-                            <mat-select required placeholder="I Want">
+                            <mat-select name="service" ngModel required placeholder="I Want">
                                 <mat-option value="1">App Development</mat-option>
                                 <mat-option value="2">Marketing</mat-option>
                                 <mat-option value="3">Branding</mat-option>
@@ -49,18 +49,24 @@
                     </div>
                     <div class="form-group">
                         <mat-form-field class="form-mat form-mat my-contact-field LinotteRegular font-18">
-                            <input required matInput placeholder="Country">
+                            <input type="text" name="country" ngModel required matInput placeholder="Country">
                         </mat-form-field>
                     </div>
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col-sm">
                                 <h5 class="LinotteRegular contact-texts">
-                                    Attach your file
+                                    <span *ngIf="!attached">
+                                        Attach your file
+                                    </span>
+                                    <span *ngIf="attached">
+                                        {{FileName}}
+                                    </span>
                                 </h5>
                             </div>
                             <div class="col-xl-4">
-                                <button matTooltip="Upload a file with your ideas, goals, targets, proposals with requirements and we will get back to you!" aria-label="Button that displays a tooltip when focused or hovered over" class="btn-block contact-buttons" mat-raised-button color="primary">
+                                <button [disabled]="loading" type="button" (click)="TriggerFile('fileAttach');" matTooltip="Upload a file with your ideas, goals, targets, proposals with requirements and we will get back to you!" aria-label="Button that displays a tooltip when focused or hovered over"
+                                    class="btn-block contact-buttons" mat-raised-button color="primary">
                                   <mat-icon>cloud_upload</mat-icon>
                                 </button>
                             </div>
@@ -68,13 +74,20 @@
                     </div>
                     <div class="space-50"></div>
                     <div class="form-group text-center">
-                        <button class="text-uppercase col-xl-2 LinotteRegular font-18 contact-buttons" mat-raised-button color="primary">
-                            SEND
+                        <button [disabled]="loading" type="submit" class="text-uppercase col-xl-2  LinotteRegular font-18 contact-buttons" mat-raised-button color="primary">
+                            <span *ngIf="!loading">
+                                SEND
+                            </span>
+                            <mat-spinner  class="offset-md-5 offset-5 offset-xl-0 spinner-mg" [diameter]="40" color="warn" *ngIf="loading"></mat-spinner>
                          </button>
                     </div>
                     <div class="space-120 no-mobile-sm"></div>
                     <div class="space-200 no-mobile-xl"></div>
                     <div class="space-50 standard"></div>
+                    <fieldset style="display: none">
+                        <input ngModel (change)="FileAttachment($event.target.files[0]);" id="fileAttach" name="attachment" type="file">
+                        <input name="fileName" [(ngModel)]="FileName" type="hidden">
+                    </fieldset>
                 </form>
             </div>
             <div class="col-sm text-center bg-mobile pointer d-md-none">

@@ -48,6 +48,18 @@
     }
 }
 
+@media only screen and (max-height: 800px) {
+    .none-sm-h {
+        display: none;
+    }
+    .mg-h {
+        margin-left: 60%
+    }
+    .row-h {
+        margin-top: -15% !important
+    }
+}
+
 .pointer-left {
     margin-left: 1em
 }

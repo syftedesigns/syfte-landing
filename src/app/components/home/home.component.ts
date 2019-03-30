@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
 import { SliderService } from 'src/app/services/slideshow/slider.service';
 import { SlideComponent } from 'src/app/classes/slide.class';
 import { DOCUMENT } from '@angular/platform-browser';
-
+import * as $ from 'jquery';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -31,19 +31,19 @@ export class HomeComponent implements OnInit, OnDestroy {
       const VisualComponent = new SlideComponent('visual', false, 1);
       const BackendComponent = new SlideComponent('backend', false, 2);
       const AppComponent = new SlideComponent('app', false, 3);
-      const AdwordComponent = new SlideComponent('adword', false, 4);
-      const UxComponent = new SlideComponent('ux', false, 5);
-      const BrandingComponent = new SlideComponent('branding', false, 6);
-      const MarketingComponent = new SlideComponent('marketing', false, 7);
+      const UxComponent = new SlideComponent('ux', false, 4);
+      const BrandingComponent = new SlideComponent('branding', false, 5);
+      const MarketingComponent = new SlideComponent('marketing', false, 6);
+      // const AdwordComponent = new SlideComponent('adword', false, 7);
       this._slide._slideIems.push(WebDesignComponent);
       this._slide._slideIems.push(VisualComponent);
       this._slide._slideIems.push(BackendComponent);
       this._slide._slideIems.push(AppComponent);
-      this._slide._slideIems.push(AdwordComponent);
+      // this._slide._slideIems.push(AdwordComponent);
       this._slide._slideIems.push(UxComponent);
       this._slide._slideIems.push(BrandingComponent);
       this._slide._slideIems.push(MarketingComponent);
-      if (this._slide._slideIems.length >= 7 && this._slide._slideIems !== undefined) {
+      if (this._slide._slideIems.length >= 6 && this._slide._slideIems !== undefined) {
         resolve(true);
       }
     });
@@ -59,7 +59,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         }
       }
       this._slide.currentPosition = (this._slide.currentPosition + 1);
-      if (this._slide.currentPosition >= 8) {
+      if (this._slide.currentPosition >= 6) {
         this._slide.currentPosition = 0;
       }
       for (const page of this._slide._slideIems) {
@@ -68,7 +68,8 @@ export class HomeComponent implements OnInit, OnDestroy {
         }
       }
         this.currentPage = this._slide.currentPosition;
-        console.log('position ' + this.currentPage);
     }, 4500);
+    $('html, body').animate({ scrollTop: 0 }, 300);
   }
+  // $('html, body').animate({ scrollTop: 0 }, 300);
 }

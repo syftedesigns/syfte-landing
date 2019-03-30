@@ -3,6 +3,7 @@ import { MenuService } from '../services/menu/menu.service';
 import { Router, ActivationEnd } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
 import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
+import { ContactService } from '../services/contact/contact.service';
 
 @Component({
   selector: 'app-pages',
@@ -14,7 +15,7 @@ export class PagesComponent implements OnInit {
     title: ''
   };
   constructor(public _menu: MenuService, private route: Router,
-    private title: Title, private meta: Meta) {
+    private title: Title, private meta: Meta, public _contact: ContactService) {
       this.getEvents();
     }
 

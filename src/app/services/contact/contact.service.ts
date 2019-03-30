@@ -1,0 +1,57 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { ClientContact } from 'src/app/classes/client.class';
+import { map, catchError } from 'rxjs/operators';
+import { Observable } from 'rxjs/internal/Observable';
+import { ProposalData } from 'src/app/classes/proposal.class';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ContactService {
+  public FormSent: boolean = false;
+  public author: string = 'root';
+  constructor(private _http: HttpClient) { }
+
+  // Contact Form
+  ContactSyfte(ticket: ClientContact, urlToSend?: string) {
+    const url = `./sendgrid/${urlToSend}.php`;
+    const form = new FormData();
+    form.append('name', ticket.name);
+    form.append('phone', ticket.phone);
+    form.append('email', ticket.email);
+    form.append('message', ticket.message);
+    return this._http.post(url, form).pipe(
+      map((resp: any) => {
+        return resp;
+      }),
+      catchError( (err: any)  => {
+        console.error(err);
+        return new Observable<string | boolean>();
+      })
+    );
+  }
+  ProposalSyfte(DataProposal: ProposalData, urlToSend: string, withAttach: boolean) {
+    const url = `./sendgrid/${urlToSend}.php`;
+    const form = new FormData();
+    form.append('name', DataProposal.name);
+    form.append('phone', DataProposal.phone);
+    form.append('email', DataProposal.email);
+    form.append('country', DataProposal.country);
+    form.append('service', DataProposal.service);
+    if (withAttach) {
+        form.append('attachment',
+        DataProposal.attachment,
+        DataProposal.attachment.name);
+    }
+    return this._http.post(url, form).pipe(
+      map((resp: any) => {
+        return resp;
+      }),
+      catchError( (err: any)  => {
+        console.error(err);
+        return new Observable<string | boolean>();
+      })
+    );
+  }
+}
