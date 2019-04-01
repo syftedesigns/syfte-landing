@@ -873,5 +873,13 @@ Custom theme
     }
 }
 
+.red-snackbar {
+    background: rgb(228, 82, 56) !important;
+}
+
+.success-snackbar {
+    background: #0ea347
+}
+
 
 /* End custom theme */

@@ -11,13 +11,15 @@ import * as $ from 'jquery';
 export class HomeComponent implements OnInit, OnDestroy {
   public SlidePages: SlideComponent[] = [];
   public currentPage: number = 0;
-  constructor(public _slide: SliderService, @Inject(DOCUMENT) private _document: Document) { }
+  constructor(public _slide: SliderService, @Inject(DOCUMENT) private _document: Document) {
+  }
 
   async ngOnInit() {
     const PagesSliding = await this.CreateSlideItems();
     if (PagesSliding) {
-      this.SlidePages = this._slide._slideIems;
-         //  this.changeSliderPageAuto();
+            this.SlidePages = this._slide._slideIems;
+            // this.changeSliderPageAuto();
+            // this._slide.interval.emit(4500);
     }
   }
   ngOnDestroy() {
@@ -49,27 +51,37 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
   // Cambiar slider dinamicamente
-  changeSliderPageAuto(): void {
-    setInterval((): void => {
-      if (this.currentPage === this._slide.currentPosition) {
-        for (const page of this._slide._slideIems) {
-          if (page.position === this._slide.currentPosition) {
-            page.Displayed = false;
+  changeSliderPageAuto(interval?: number): void {
+    this._slide.interval.subscribe({
+      next: (event: number): void => {
+      // Si no hay cambio manual, se mueve automaticamente
+        const asyncSlider = setInterval((): void => {
+          if (!this._slide.ChangingPosition) {
+            if (this.currentPage === this._slide.currentPosition) {
+              for (const page of this._slide._slideIems) {
+                if (page.position === this._slide.currentPosition) {
+                  page.Displayed = false;
+                }
+              }
+            }
+            this._slide.currentPosition = (this._slide.currentPosition + 1);
+            if (this._slide.currentPosition >= 6) {
+              this._slide.currentPosition = 0;
+            }
+            for (const page of this._slide._slideIems) {
+              if (page.position === this._slide.currentPosition) {
+                page.Displayed = true;
+              }
+            }
+              this.currentPage = this._slide.currentPosition;
+              console.log(this._slide.currentPosition);
+          } else {
+            return;
           }
-        }
+        }, event);
+        $('html, body').animate({ scrollTop: 0 }, 300);
       }
-      this._slide.currentPosition = (this._slide.currentPosition + 1);
-      if (this._slide.currentPosition >= 6) {
-        this._slide.currentPosition = 0;
-      }
-      for (const page of this._slide._slideIems) {
-        if (page.position === this._slide.currentPosition) {
-          page.Displayed = true;
-        }
-      }
-        this.currentPage = this._slide.currentPosition;
-    }, 4500);
-    $('html, body').animate({ scrollTop: 0 }, 300);
+    }
+  );
   }
-  // $('html, body').animate({ scrollTop: 0 }, 300);
 }

@@ -11,15 +11,15 @@
         </div>
         <div class="space-50"></div>
         <!-- newsletter -->
-        <form>
+        <form (ngSubmit)="RegisterNewsletter(newsletterDesktop);" ngNativeValidate #newsletterDesktop="ngForm">
             <div class="form-row text-center">
                 <div class="col-md-6 offset-md-3 form-mg notebook-2">
                     <mat-form-field class="footer-mat text-white LinotteRegular font-18 my-form-field">
-                        <input required type="email" matInput placeholder="E-mail address">
+                        <input ngModel name="email" required type="email" matInput placeholder="E-mail address">
                     </mat-form-field>
                 </div>
                 <div style="position: absolute" class="col-md-5 offset-xl-3 offset-md-5">
-                    <button class="LinotteRegular font-weight-bold btn-newsletter btn-tablet" mat-raised-button>Subscribe</button>
+                    <button type="submit" class="LinotteRegular font-weight-bold btn-newsletter btn-tablet" mat-raised-button>Subscribe</button>
                 </div>
             </div>
         </form>
@@ -95,15 +95,15 @@
         </div>
         <div class="space-30"></div>
         <div class="row">
-            <form style="position: relative; left: 1em;" class="form-newsletter-mobile">
+            <form ngNativeValidate (ngSubmit)="RegisterNewsletter(newsletter);" #newsletter="ngForm" style="position: relative; left: 1em;" class="form-newsletter-mobile">
                 <div class="form-row">
                     <div class="col text-center">
                         <mat-form-field class="input-newsletter text-white LinotteRegular font-18 my-form-field">
-                            <input matInput placeholder="E-mail address">
+                            <input type="email" ngModel required name="email" matInput placeholder="E-mail address">
                         </mat-form-field>
                     </div>
                     <div class="col">
-                        <button class="LinotteRegular font-weight-bold btn-newsletter" mat-raised-button>Subscribe</button>
+                        <button type="submit" class="LinotteRegular font-weight-bold btn-newsletter" mat-raised-button>Subscribe</button>
                     </div>
                 </div>
             </form>

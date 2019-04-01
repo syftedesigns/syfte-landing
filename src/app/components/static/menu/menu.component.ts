@@ -1,13 +1,20 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, HostListener } from '@angular/core';
+import { Component,
+   OnInit,
+   ViewChild,
+   ElementRef,
+   AfterViewInit,
+   HostListener,
+   OnDestroy } from '@angular/core';
 import * as $ from 'jquery';
 import { Router } from '@angular/router';
 import { MenuService } from 'src/app/services/menu/menu.service';
+import { SliderService } from 'src/app/services/slideshow/slider.service';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
-export class MenuComponent implements OnInit, AfterViewInit {
+export class MenuComponent implements OnInit, OnDestroy, AfterViewInit {
   public sticky: boolean = false;
   MenuPosition: number;
   // Para saber la posición del menu
@@ -21,9 +28,12 @@ export class MenuComponent implements OnInit, AfterViewInit {
       this.sticky = false;
     }
   }
-  constructor(private _navigate: Router, public _menu: MenuService) { }
+  constructor(private _navigate: Router, public _menu: MenuService,
+    private _slide: SliderService) { }
 
   ngOnInit() {
+  }
+  ngOnDestroy() {
   }
   ngAfterViewInit() {
     this.MenuPosition = this.stickyMenu.nativeElement.offsetTop;
@@ -35,6 +45,7 @@ export class MenuComponent implements OnInit, AfterViewInit {
       $('.menu-overlay').toggleClass('open');
       $('.menu').toggleClass('open');
       this._menu.OnPopup = true;
+      this._slide.ChangingPosition = true;
     });
   }
   CloseOverlayMenu(event: any): void  {

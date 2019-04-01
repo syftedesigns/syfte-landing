@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Output, EventEmitter } from '@angular/core';
 import { SlideComponent } from 'src/app/classes/slide.class';
 
 @Injectable({
@@ -6,6 +6,12 @@ import { SlideComponent } from 'src/app/classes/slide.class';
 })
 export class SliderService {
   public _slideIems: SlideComponent[] = [];
-  public currentPosition = 0;
+  public currentPosition: number = 0;
+  public LastPosition: number = 0;
+  public duration: number = 4500;
+  public ChangingPosition: boolean = false;
+  @Output() interval: EventEmitter<number> = new EventEmitter<number>();
+  public toLeft: boolean = false;
+  public toRight: boolean = false;
   constructor() { }
 }

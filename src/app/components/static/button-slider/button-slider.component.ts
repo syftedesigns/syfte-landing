@@ -9,6 +9,7 @@ import * as $ from 'jquery';
 })
 export class ButtonSliderComponent implements OnInit {
   public currentPage: number = 0;
+  public duration: number = 4500;
   constructor(public _paginator: SliderService) { }
 
   ngOnInit() {
@@ -45,7 +46,7 @@ export class ButtonSliderComponent implements OnInit {
         }
       }
     }
-    console.log(this._paginator.currentPosition);
+    this._paginator.LastPosition = currentPosition;
     $('html, body').animate({ scrollTop: 0 }, 300);
   }
   changePositionToRight(currentPosition: number): void {
@@ -70,7 +71,8 @@ export class ButtonSliderComponent implements OnInit {
         }
       }
     }
-    console.log(this._paginator.currentPosition);
+    this._paginator.LastPosition = currentPosition;
+    // this._paginator.ChangingPosition = true;
     $('html, body').animate({ scrollTop: 0 }, 300);
   }
   /* End slider arrows */

@@ -4,6 +4,7 @@ import { ClientContact } from 'src/app/classes/client.class';
 import { map, catchError } from 'rxjs/operators';
 import { Observable } from 'rxjs/internal/Observable';
 import { ProposalData } from 'src/app/classes/proposal.class';
+import { LOCAL_ENVIROMENT } from 'src/app/classes/enviroment';
 
 @Injectable({
   providedIn: 'root'
@@ -44,6 +45,20 @@ export class ContactService {
         DataProposal.attachment,
         DataProposal.attachment.name);
     }
+    return this._http.post(url, form).pipe(
+      map((resp: any) => {
+        return resp;
+      }),
+      catchError( (err: any)  => {
+        console.error(err);
+        return new Observable<string | boolean>();
+      })
+    );
+  }
+  Newsletter(email: string) {
+    const url = `${LOCAL_ENVIROMENT}/newsletter.php?operationType=newsletter`;
+    const form = new FormData();
+    form.append('email', email);
     return this._http.post(url, form).pipe(
       map((resp: any) => {
         return resp;

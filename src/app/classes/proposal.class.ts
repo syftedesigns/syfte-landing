@@ -4,7 +4,7 @@ export class ProposalData {
         public name: string,
         public email: string,
         public phone: string,
-        public service: string | Number,
+        public service: string,
         public country: string,
         public attachment?: File
     ) {}

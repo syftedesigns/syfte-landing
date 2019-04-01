@@ -74,7 +74,8 @@ export class ContactComponent implements OnInit, OnDestroy {
       this.Attachment = null;
       this.attached = false;
       this.snackBar.open('The file must be pdf, txt, pdf, jpg, png, jpeg, gif', null, {
-        duration: 2000
+        duration: 5000,
+        panelClass: ['red-snackbar']
       });
     }
   }
