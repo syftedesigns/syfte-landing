@@ -5,6 +5,7 @@ import { map, catchError } from 'rxjs/operators';
 import { Observable } from 'rxjs/internal/Observable';
 import { ProposalData } from 'src/app/classes/proposal.class';
 import { LOCAL_ENVIROMENT } from 'src/app/classes/enviroment';
+import { MatSnackBar } from '@angular/material';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ import { LOCAL_ENVIROMENT } from 'src/app/classes/enviroment';
 export class ContactService {
   public FormSent: boolean = false;
   public author: string = 'root';
-  constructor(private _http: HttpClient) { }
+  constructor(private _http: HttpClient, private snackBar: MatSnackBar) { }
 
   // Contact Form
   ContactSyfte(ticket: ClientContact, urlToSend?: string) {
@@ -28,6 +29,10 @@ export class ContactService {
       }),
       catchError( (err: any)  => {
         console.error(err);
+        this.snackBar.open('Ops! We have problems to process your data. Please try again', null, {
+          duration: 5000,
+          panelClass: ['red-snackbar']
+        });
         return new Observable<string | boolean>();
       })
     );
@@ -51,6 +56,10 @@ export class ContactService {
       }),
       catchError( (err: any)  => {
         console.error(err);
+        this.snackBar.open('Ops! We have problems to process your data. Please try again', null, {
+          duration: 5000,
+          panelClass: ['red-snackbar']
+        });
         return new Observable<string | boolean>();
       })
     );
@@ -65,6 +74,10 @@ export class ContactService {
       }),
       catchError( (err: any)  => {
         console.error(err);
+        this.snackBar.open('Ops! We have problems to process your data. Please try again', null, {
+          duration: 5000,
+          panelClass: ['red-snackbar']
+        });
         return new Observable<string | boolean>();
       })
     );

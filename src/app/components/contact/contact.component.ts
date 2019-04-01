@@ -54,9 +54,18 @@ export class ContactComponent implements OnInit, OnDestroy {
     this._contact.ProposalSyfte(Proposal, 'attachment', this.attached).subscribe(
       (observer: PartialObserver<any> | any): void => {
         if (observer.status) {
-          formProposal.reset();
           this.loading = false;
+          this.snackBar.open('Operation Successfully!', null, {
+            duration: 5000,
+            panelClass: ['success-snackbar']
+          });
           this._router.navigate(['/thank']);
+        } else {
+          this.snackBar.open('Ops! We have problems to process your data. Please try again', null, {
+            duration: 5000,
+            panelClass: ['red-snackbar']
+          });
+          throw new Error(observer);
         }
       }
     );

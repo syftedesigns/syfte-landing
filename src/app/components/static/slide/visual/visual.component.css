@@ -62,4 +62,7 @@
         position: relative;
         top: -3.5em
     }
+    .mg-section {
+        margin-top: -8%
+    }
 }
