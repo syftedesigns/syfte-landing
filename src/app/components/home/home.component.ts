@@ -11,20 +11,65 @@ import * as $ from 'jquery';
 export class HomeComponent implements OnInit, OnDestroy {
   public SlidePages: SlideComponent[] = [];
   public currentPage: number = 0;
+  public interval: any;
   constructor(public _slide: SliderService, @Inject(DOCUMENT) private _document: Document) {
+    setTimeout((): void => {
+      if (!this._slide.Destroyed) {
+        this._slide.ChangingManualSlider.emit(false);
+      } else {
+       this._slide.ChangingManualSlider.emit(true);
+       this._slide.Destroyed = false;
+      }
+    }, 500);
   }
 
   async ngOnInit() {
-    const PagesSliding = await this.CreateSlideItems();
-    if (PagesSliding) {
+    this._slide.ChangingManualSlider.subscribe({
+      next: async (BooleanValue: boolean) => {
+        if (BooleanValue) {
+          // Significa que le dio a alguna flecha
+          // Y si le da alguna flecha destruimos todo y reiniciamos el slider en la ultima posición
+          console.log(this._slide.currentPosition);
+          this.currentPage = this._slide.currentPosition  + 1;
+          console.log(this.currentPage);
+          this._slide.currentPosition = 0;
+          this._slide.LastPosition = 0;
+          this.currentPage = 0;
+          this._slide._slideIems = [];
+          this.SlidePages = [];
+          const page = await this.CreateSlideItems();
+          if (page) {
             this.SlidePages = this._slide._slideIems;
-            // this.changeSliderPageAuto();
-            // this._slide.interval.emit(4500);
-    }
+            setTimeout((): void => {
+              this.changeSliderPageAuto();
+            }, 4500);
+          }
+        } else {
+          const PagesSliding = await this.CreateSlideItems();
+          if (PagesSliding) {
+                  this.SlidePages = this._slide._slideIems;
+                  this._slide.currentPosition = 0;
+                  this._slide.LastPosition = 0;
+                  this.currentPage = 0;
+                  this.changeSliderPageAuto();
+                  this._slide.interval.emit(4500);
+          }
+          return;
+        }
+      }
+    });
   }
   ngOnDestroy() {
+    // Destruimos todo
     this._document.body.removeAttribute('class');
     this._slide._slideIems = [];
+    this.SlidePages = [];
+    this._slide.currentPosition = 0;
+    this._slide.LastPosition = 0;
+    this.currentPage = 0;
+    this._slide.interval.unsubscribe();
+    this._slide.Destroyed = true;
+    this._slide.ChangingManualSlider.emit(false);
   }
   CreateSlideItems(): Promise<boolean> {
     return new Promise((resolve, reject) => {
@@ -55,14 +100,18 @@ export class HomeComponent implements OnInit, OnDestroy {
     this._slide.interval.subscribe({
       next: (event: number): void => {
       // Si no hay cambio manual, se mueve automaticamente
-        const asyncSlider = setInterval((): void => {
+        this.interval = setInterval((): void => {
           if (!this._slide.ChangingPosition) {
+            // console.log('current ' + this.currentPage);
+            console.log('service ' + this._slide.currentPosition);
             if (this.currentPage === this._slide.currentPosition) {
               for (const page of this._slide._slideIems) {
                 if (page.position === this._slide.currentPosition) {
                   page.Displayed = false;
                 }
               }
+            } else {
+              return;
             }
             this._slide.currentPosition = (this._slide.currentPosition + 1);
             if (this._slide.currentPosition >= 6) {
@@ -74,7 +123,6 @@ export class HomeComponent implements OnInit, OnDestroy {
               }
             }
               this.currentPage = this._slide.currentPosition;
-              console.log(this._slide.currentPosition);
           } else {
             return;
           }

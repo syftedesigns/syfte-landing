@@ -71,8 +71,9 @@ export class ButtonSliderComponent implements OnInit {
         }
       }
     }
-    this._paginator.LastPosition = currentPosition;
+    // this._paginator.LastPosition = currentPosition;
     // this._paginator.ChangingPosition = true;
+    this._paginator.ChangingManualSlider.emit(true);
     $('html, body').animate({ scrollTop: 0 }, 300);
   }
   /* End slider arrows */
