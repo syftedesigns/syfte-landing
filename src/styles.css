@@ -585,7 +585,7 @@ Custom theme
 
 /* Desktop */
 
-@media only screen and (min-width:1200px) and (max-width: 2000px) {
+@media only screen and (min-width:1200px) and (max-width: 2500px) {
     .theme-ux {
         background-image: url(./assets/images/desktop/wallpaper-ux.png);
         background-repeat: no-repeat;

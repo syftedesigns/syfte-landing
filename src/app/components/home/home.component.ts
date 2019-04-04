@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit, OnDestroy {
             this.SlidePages = this._slide._slideIems;
             setTimeout((): void => {
               this.changeSliderPageAuto();
-            }, 4500);
+            }, 5000);
           }
         } else {
           const PagesSliding = await this.CreateSlideItems();
@@ -52,7 +52,7 @@ export class HomeComponent implements OnInit, OnDestroy {
                   this._slide.LastPosition = 0;
                   this.currentPage = 0;
                   this.changeSliderPageAuto();
-                  this._slide.interval.emit(4500);
+                  this._slide.interval.emit(5000);
           }
           return;
         }

@@ -1,5 +1,9 @@
 ul li>a {
-    padding: 1em
+    padding: 1em;
+}
+
+ul li {
+    z-index: 10 !important;
 }
 
 ul li>.nav-link:hover {

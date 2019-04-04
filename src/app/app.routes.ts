@@ -15,5 +15,5 @@ const routes: Routes = [
 ];
 
 export const SYFTE_ROUTES = RouterModule.forRoot(routes, {
-    useHash: false
+    useHash: true
 });

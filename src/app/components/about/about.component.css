@@ -73,6 +73,41 @@
     }
 }
 
+@media only screen and (min-width: 2000px) {
+    .article-who {
+        margin-left: -30%;
+        position: relative;
+        left: -8em;
+    }
+    .bg-dispositives {
+        margin-left: -70%
+    }
+    .we-do {
+        position: relative;
+        left: 11%;
+        margin-top: 20%
+    }
+    .circle-yellow {
+        position: absolute;
+        width: 50%
+    }
+    .img-slider {
+        border-radius: 50%;
+        margin-left: 9%;
+        margin-top: 11%;
+        width: 18%;
+        border: 0px
+    }
+    .employ-slider {
+        margin-left: -95%;
+        position: relative;
+        top: 1.5em
+    }
+    .machine {
+        width: 120%
+    }
+}
+
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
     .article-who {
         margin-left: -30%;

@@ -20,7 +20,7 @@
                 <img matTooltip="3250 NE 1st Ave. Suite 305 Caracas, 33137" aria-label="Button that displays a tooltip when focused or hovered over" class="zone" src="./assets/images/desktop/pointer.png" alt="syfte_location">
                 <div class="space-20"></div>
                 <div class="col-sm text-center">
-                    <form ngNativeValidate #formContact="ngForm" (ngSubmit)="sendForm(formContact);">
+                    <form id="storyFormContactDesktop" ngNativeValidate #formContact="ngForm" (ngSubmit)="sendForm(formContact);">
                         <div class="form-group">
                             <mat-form-field class="form-mat text-white LinotteRegular font-18 my-form-field">
                                 <input name="name" ngModel required type="text" matInput placeholder="Full Name">
@@ -42,7 +42,9 @@
                             </mat-form-field>
                         </div>
                         <div class="form-group text-center">
-                            <button type="submit" class="LinotteLight font-18 text-uppercase w-25 button-form" mat-raised-button color="warn">Send</button>
+                            <button type="submit" class="LinotteLight font-18 text-uppercase w-25 button-form" mat-raised-button color="warn">
+                                Send
+                            </button>
                         </div>
                     </form>
                     <div class="space-20"></div>
@@ -69,7 +71,7 @@
         <div class="space-30"></div>
         <div class="row d-md-none">
             <div class="col text-center">
-                <form ngNativeValidate #formMobile="ngForm" (ngSubmit)="sendForm(formMobile);">
+                <form id="storyFormContactResponsive" ngNativeValidate #formMobile="ngForm" (ngSubmit)="sendForm(formMobile);">
                     <div class="form-group">
                         <p>
                             <mat-form-field class="my-form-field text-white LinotteRegular font-18 mobile-input" appearance="outline">
