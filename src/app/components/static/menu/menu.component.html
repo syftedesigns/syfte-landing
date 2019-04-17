@@ -25,6 +25,20 @@
                         <li class="nav-item">
                             <a [ngClass]="{'text-dark': !_menu.DarkMenu, 'text-white': _menu.DarkMenu}" [routerLink]="['/contact']" class="nav-link LinotteRegular font-25">Contact</a>
                         </li>
+                        <li *ngIf="!_menu.DarkMenu" class="nav-item dropdown pointer">
+                            <a title="Translation" [ngClass]="{'text-dark': !_menu.DarkMenu, 'text-white': _menu.DarkMenu}" class="nav-link LinotteRegular font-25 dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons">
+                                    language
+                                </i>&nbsp;English
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a id="lang-es" style="margin-top: -35%; margin-left: 1% !important" [ngClass]="{'text-dark': !_menu.DarkMenu, 'text-white': _menu.DarkMenu}" class="dropdown-item LinotteRegular font-25" href="https://www.syftedesigns.com/es/">
+                                    <i class="material-icons">
+                                        arrow_right
+                                    </i>&nbsp;Spanish
+                                </a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -56,7 +70,7 @@
                                 <a style="font-weight: bold" class="font-16 active LinotteLight text-white">En</a>
                             </div>
                             <div class="col-md-2 col-2 default">
-                                <a class="font-16 LinotteLight text-white">Es</a>
+                                <a href="https://www.syftedesigns.com/es/" class="font-16 LinotteLight text-white">Es</a>
                             </div>
                         </div>
                     </nav>

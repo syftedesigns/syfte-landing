@@ -2,7 +2,10 @@ import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
 import { SliderService } from 'src/app/services/slideshow/slider.service';
 import { SlideComponent } from 'src/app/classes/slide.class';
 import { DOCUMENT } from '@angular/platform-browser';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatSnackBar } from '@angular/material';
 import * as $ from 'jquery';
+import { VideoModalComponent } from '../static/video/video-modal.component';
+import { PartialObserver } from 'rxjs';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -12,7 +15,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   public SlidePages: SlideComponent[] = [];
   public currentPage: number = 0;
   public interval: any;
-  constructor(public _slide: SliderService, @Inject(DOCUMENT) private _document: Document) {
+  constructor(public _slide: SliderService,
+              @Inject(DOCUMENT) private _document: Document,
+              private dialog: MatDialog,
+              private snackBar: MatSnackBar) {
     setTimeout((): void => {
       if (!this._slide.Destroyed) {
         this._slide.ChangingManualSlider.emit(false);
@@ -131,5 +137,24 @@ export class HomeComponent implements OnInit, OnDestroy {
       }
     }
   );
+  }
+  openVideo(width: number, height: number): void {
+    const dialog = this.dialog.open(VideoModalComponent, {
+      width: `${width}px`,
+      height: `${height}px`,
+      panelClass: 'videoPopup',
+      data: {
+        width: Math.abs((((width * 4.8) / 100 ) -  width)),
+        height: Math.abs((((height * 20) / 100 ) -  height))
+      }
+    });
+    dialog.afterClosed().subscribe(
+      (observer: PartialObserver<any> | any): void => {
+        this.snackBar.open('Thanks for watching!', null, {
+          duration: 3000,
+          panelClass: ['success-snackbar']
+        });
+      }
+    );
   }
 }
