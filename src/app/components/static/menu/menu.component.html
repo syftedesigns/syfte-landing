@@ -16,7 +16,7 @@
                         </li>
                         <li *ngIf="!_menu.DarkMenu" class="nav-item">
                             <a [ngClass]="{'text-dark': !_menu.DarkMenu, 'text-white': _menu.DarkMenu}" [routerLink]="['/']" class="navbar-brand">
-                                <img style="position: relative; left: 0.5em; margin-top: -15%" title="Syfte Brand" src="./assets/images/desktop/logo-05.png" alt="Syfte_brand">
+                                <img style="position: relative; left: 0.5em; margin-top: -15%" title="Syfte Brand" src="./assets/images/desktop/logo-05.png" alt="Our marketing brand logo dark">
                             </a>
                         </li>
                         <li class="nav-item">
@@ -59,15 +59,15 @@
                 </div>
                 <div class="col-sm col-3">
                     <a [routerLink]="['/']" class="navbar-brand">
-                        <img *ngIf="!_menu.DarkMenu" class="menu-brand offset-lg-4 offset-md-2 d-none d-md-block" title="Syfte Brand" src="./assets/images/desktop/logo-05.png" alt="Syfte_brand">
-                        <img id="brand" style="margin-top: -30%" class="d-md-none offset-3" src="./assets/images/mobile/Logo-10.png" alt="Syfte_brand">
+                        <img *ngIf="!_menu.DarkMenu" class="menu-brand offset-lg-4 offset-md-2 d-none d-md-block" title="Syfte Brand" src="./assets/images/desktop/logo-05.png" alt="Our marketing brand logo dark">
+                        <img id="brand" style="margin-top: -30%" class="d-md-none offset-3" src="./assets/images/mobile/Logo-10.png" alt="Our marketing brand logo dark">
                     </a>
                 </div>
                 <div class="col-sm col-3 offset-3 offset-sm-0 div-language">
                     <nav class="offset-md-7">
                         <div class="row menu-language language language-mobile2">
                             <div class="col-md-2 col-2 default">
-                                <a style="font-weight: bold" class="font-16 active LinotteLight text-white">En</a>
+                                <a [routerLink]="['/']" style="font-weight: bold" class="font-16 active LinotteLight text-white">En</a>
                             </div>
                             <div class="col-md-2 col-2 default">
                                 <a href="https://www.syftedesigns.com/es/" class="font-16 LinotteLight text-white">Es</a>
@@ -103,7 +103,7 @@
         <ul class="one margin-one">
             <li class="brand-overlay">
                 <a (click)="ToRouting('');" class="nav-links">
-                    <img src="./assets/images/tablet/logo-white.png" alt="Syfte_brand">
+                    <img src="./assets/images/tablet/logo-white.png" alt="Our marketing brand logo white">
                 </a>
             </li>
             <li (click)="ToRouting('');"><a class="nav-links pointer">Home</a></li>
@@ -125,17 +125,17 @@
             <div class="row text-center offset-md-2 offset-2">
                 <div class="col-md-3 col-3 text-white">
                     <a href="https://www.instagram.com/syftedesigns/?hl=es" target="_blank">
-                        <img class="ig-social" src="./assets/images/tablet/Iconos-11.png" alt="syfte_ig">
+                        <img class="ig-social" src="./assets/images/tablet/Iconos-11.png" alt="Our brand in instagram">
                     </a>
                 </div>
                 <div class="col-md-3 col-3 text-white">
                     <a href="https://twitter.com/DesignsSyfte" target="_blank">
-                        <img class="tw-social" src="./assets/images/tablet/Iconos-12.png" alt="syfte_twitter">
+                        <img class="tw-social" src="./assets/images/tablet/Iconos-12.png" alt="Our brand in twitter">
                     </a>
                 </div>
                 <div class="col-md-3 col-3 text-white">
                     <a href="https://www.facebook.com/syftedesigns/" target="_blank">
-                        <img class="fb-social" src="./assets/images/tablet/Iconos-13.png" alt="syfte_fb">
+                        <img class="fb-social" src="./assets/images/tablet/Iconos-13.png" alt="Our brand in facebook">
                     </a>
                 </div>
             </div>
