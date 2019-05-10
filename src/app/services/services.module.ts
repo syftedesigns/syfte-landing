@@ -5,6 +5,7 @@ import { SliderService } from './slideshow/slider.service';
 import { MenuService } from './menu/menu.service';
 import { ContactService } from './contact/contact.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CampaignsService } from './ads/campaigns.service';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [
     SliderService,
     MenuService,
-    ContactService
+    ContactService,
+    CampaignsService
   ]
 })
 export class ServicesModule { }

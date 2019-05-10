@@ -18,6 +18,7 @@ import { ContactHistoryComponent } from './contact-history/contact-history.compo
 import { AngularMaterialModule } from 'src/app/angular-material.module';
 import { FormsModule } from '@angular/forms';
 import { VideoModalComponent } from './video/video-modal.component';
+import { MenuADSComponent } from './ads/menu-ads/menu-ads.component';
 
 @NgModule({
   imports: [
@@ -39,7 +40,8 @@ import { VideoModalComponent } from './video/video-modal.component';
     WebDesignComponent,
     ButtonSliderComponent,
     ContactHistoryComponent,
-    VideoModalComponent
+    VideoModalComponent,
+    MenuADSComponent
   ],
   exports: [
     FooterComponent,
@@ -54,7 +56,8 @@ import { VideoModalComponent } from './video/video-modal.component';
     WebDesignComponent,
     ButtonSliderComponent,
     ContactHistoryComponent,
-    VideoModalComponent
+    VideoModalComponent,
+    MenuADSComponent
   ],
   entryComponents: [
     AdvertisingComponent,
@@ -64,7 +67,8 @@ import { VideoModalComponent } from './video/video-modal.component';
     UxComponent,
     VisualComponent,
     WebDesignComponent,
-    VideoModalComponent
+    VideoModalComponent,
+    MenuADSComponent
   ]
 })
 export class StaticModule { }

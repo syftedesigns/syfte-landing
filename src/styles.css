@@ -164,6 +164,10 @@ Set Fonts fast
     font-size: 16px;
 }
 
+.font-12 {
+    font-size: 12px;
+}
+
 .font-14 {
     font-size: 14px;
 }
@@ -627,6 +631,13 @@ Custom theme
         background-image: url(./assets/images/desktop/contact-fixed.png);
         background-repeat: no-repeat;
     }
+    /*
+    Ads campaign
+    */
+    .ads-theme-marketing {
+        background-image: url(./assets/campaign/pages/1920/fondos-02.png) !important;
+        background-repeat: no-repeat
+    }
 }
 
 @media only screen and (min-width: 1280px) and (max-width: 1599px) {
@@ -697,6 +708,13 @@ Custom theme
         background-position: center;
         background-repeat: no-repeat;
     }
+    /*
+    Ads campaign
+    */
+    .ads-theme-marketing {
+        background-image: url(./assets/campaign/pages/768/vector-mkt.png) !important;
+        background-repeat: no-repeat;
+    }
 }
 
 
@@ -728,6 +746,11 @@ Custom theme
     }
     .theme-about {
         background-color: #e4e3e1;
+    }
+    .ads-theme-marketing {
+        background-image: url(./assets/campaign/pages/480/vector-mobile-mkt.png) !important;
+        background-repeat: no-repeat;
+        background-size: cover
     }
 }
 
@@ -900,6 +923,18 @@ Custom theme
 
 .videoPopup .mat-dialog-container {
     background-color: rgba(54, 56, 57, 0.7) !important;
+}
+
+.dialog-resize-xl .mat-dialog-container {
+    /*background-color: rgba(54, 56, 57, 1) !important;*/
+    background-image: url(./assets/campaign/pages/1920/fondos-02.png) !important;
+    background-repeat: no-repeat
+}
+
+.help-primary {
+    background-color: #3f51b5 !important;
+    font-size: 14px;
+    font-family: 'Gotham-Book', serif
 }
 
 

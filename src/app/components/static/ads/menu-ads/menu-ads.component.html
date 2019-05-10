@@ -1,0 +1,177 @@
+<nav *ngIf="_ads.showMenuCampaign" class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" [routerLink]="['/']">
+            <img src="./assets/campaign/pages/marketing/1920/Logo-03.png" class="navbar-brand-img d-none d-lg-block" alt="Make your own business with Syfte">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fe fe-x"></i>
+            </button>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" onclick="return false;" id="navbarLandings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Sitemap
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg p-lg-0" aria-labelledby="navbarLandings">
+                        <div class="row mx-lg-0">
+                            <div class="col-12 col-lg-6 p-lg-7 d-none d-lg-flex flex-column justify-content-center overlay overlay-primary overlay-80 bg-cover rounded-left" style="background-image: url(./assets/campaign/img/photos/photo-3.jpg);">
+                                <div class="position-relative text-center text-white">
+                                    <h4 class="font-weight-bold mb-0">
+                                        Want to work with us?
+                                    </h4>
+                                    <p class="font-size-sm">
+                                        Explore our way to build futures in a website.
+                                    </p>
+                                    <a [routerLink]="['/contact']" [queryParams]="{fromCampaign: 'marketing'}" class="btn btn-sm btn-white shadow-dark font-size-sm">
+                                      Get Budget
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 p-lg-7">
+                                <div class="row no-gutters">
+                                    <div class="col-6">
+                                        <h6 class="font-weight-bold text-uppercase text-primary">
+                                            Services
+                                        </h6>
+                                        <ul class="list mb-5">
+                                            <li class="list-item">
+                                                <a title="Our services in brand" [routerLink]="['/campaign/branding']" class="list-link active">
+                                                  Branding
+                                                </a>
+                                            </li>
+                                            <li class="list-item mb-1">
+                                                <a title="Our services to make a website" [routerLink]="['/campaign/website']" class="list-link">
+                                                  Website
+                                                </a>
+                                            </li>
+                                            <li class="list-item">
+                                                <a title="Our services to start your own online store" [routerLink]="['/campaign/ecommerce']" class="list-link">
+                                                  E-commerce
+                                                </a>
+                                            </li>
+                                            <li class="list-item">
+                                                <a title="Our services to make your own app" [routerLink]="['/campaign/apps']" class="list-link">
+                                                  Applications
+                                                </a>
+                                            </li>
+                                            <li class="list-item">
+                                                <a title="Our services to make your marketing campaign" [routerLink]="['/campaign/marketing']" class="list-link">
+                                                  Marketing
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <h6 class="font-weight-bold text-uppercase text-primary">
+                                            Social media
+                                        </h6>
+                                        <ul class="list mb-0">
+                                            <li class="list-item">
+                                                <a target="_blank" title="Follow us on Instagram" class="list-link" href="https://www.instagram.com/syftedesigns/?hl=es">
+                                                  Syfte Instagram
+                                                </a>
+                                            </li>
+                                            <li class="list-item">
+                                                <a target="_blank" title="Follow us on Faceebok" class="list-link" href="https://twitter.com/DesignsSyfte">
+                                                  Syfte Facebook
+                                                </a>
+                                            </li>
+                                            <li class="list-item">
+                                                <a target="_blank" title="Follow us on Twitter" class="list-link" href="https://www.facebook.com/syftedesigns/">
+                                                  Syfte Twitter
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <h6 class="font-weight-bold text-uppercase text-primary">
+                                            Website
+                                        </h6>
+                                        <ul class="list mb-0">
+                                            <li class="list-item">
+                                                <a title="Follow Syfte at home page" class="list-link" [routerLink]="['/']">
+                                                Home
+                                                </a>
+                                            </li>
+                                            <li class="list-item">
+                                                <a title="About Syfte" class="list-link" [routerLink]="['/about']">
+                                                  About us
+                                                </a>
+                                            </li>
+                                            <li class="list-item">
+                                                <a title="Contact us free" class="list-link" [routerLink]="['/contact']">
+                                                  Contact
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" onclick="return false;" id="navbarDocumentation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Company
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDocumentation">
+                        <div class="d-flex align-items-center text-decoration-none">
+                            <div class="icon icon-sm text-primary">
+                                <i class="material-icons">
+                                    accessibility
+                                </i>
+                            </div>
+                            <div class="ml-4">
+                                <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+                                    Partner&nbsp;<small class="text-muted">(Coming soon)</small>
+                                </h6>
+                                <p class="font-size-sm text-gray-700 mb-0">
+                                    Work in our creative team
+                                </p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="d-flex align-items-center text-decoration-none" href="./docs/alerts.html">
+                            <div class="icon icon-sm text-primary">
+                                <i class="material-icons">
+                                    monetization_on
+                                </i>
+                            </div>
+                            <div class="ml-4">
+                                <!-- Heading -->
+                                <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+                                    <a [routerLink]="['/contact']">
+                                        Prices
+                                    </a>
+                                </h6>
+                                <p class="font-size-sm text-gray-700 mb-0">
+                                    Get a budget for your startup
+                                </p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="d-flex align-items-center text-decoration-none" onclick="return false;">
+                            <div class="icon icon-sm text-primary">
+                                <i class="material-icons">
+                                    insert_link
+                                </i>
+                            </div>
+                            <div class="ml-4">
+                                <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+                                    Terms
+                                </h6>
+                                <p class="font-size-sm text-gray-700 mb-0">
+                                    Terms of Use & Privacy Policy
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <a class="navbar-btn btn btn-sm btn-primary lift ml-auto" target="_blank">
+              Budget my project
+            </a>
+        </div>
+    </div>
+</nav>

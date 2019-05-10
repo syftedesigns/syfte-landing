@@ -12,11 +12,13 @@ import { SYFTE_ROUTES } from './app.routes';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { StaticModule } from './components/static/static.module';
 import { ServicesModule } from './services/services.module';
+import { PublicComponent } from './components/public/public.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PagesComponent,
+    PublicComponent,
     NotFoundComponent
   ],
   imports: [

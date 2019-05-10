@@ -1,0 +1,62 @@
+<section>
+    <div class="row">
+        <div class="col-sm text-center">
+            <mat-list>
+                <h3 mat-subheader>
+                    Helper &nbsp;
+                    <mat-icon (click)="helper.show();" #helper="matTooltip" matTooltipClass="help-primary" matTooltipPosition="right" matTooltip="Select a help query to generate this automatically in the form" class="pointer">report</mat-icon>
+                </h3>
+                <mat-list>
+                    <mat-list-item>
+                        <mat-icon class="icons">send</mat-icon>&nbsp;
+                        <span (click)="getHelperString($event.path[0].innerText);">
+                          Hello, i need a marketing campaign for my business. Please give me more info
+                        </span>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon class="icons">send</mat-icon>&nbsp;
+                        <span (click)="getHelperString($event.path[0].innerText);">
+                          Hello, I need community management for my social networks.
+                        </span>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon class="icons">send</mat-icon>&nbsp;
+                        <span (click)="getHelperString($event.path[0].innerText);">
+                          Hello, I need a facebook business page
+                        </span>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon class="icons">send</mat-icon>&nbsp;
+                        <span (click)="getHelperString($event.path[0].innerText);">
+                          I need a SEM campaign to promote my business.
+                        </span>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon class="icons">send</mat-icon>&nbsp;
+                        <span (click)="getHelperString($event.path[0].innerText);">
+                          I need a SEO Optimization to promote my website.
+                        </span>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon class="icons">send</mat-icon>&nbsp;
+                        <span (click)="getHelperString($event.path[0].innerText);">
+                          I need a digital video to promote my business.
+                        </span>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon class="icons">send</mat-icon>&nbsp;
+                        <span (click)="getHelperString($event.path[0].innerText);">
+                          I only need a marketing specialist.
+                        </span>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon class="icons">send</mat-icon>&nbsp;
+                        <span (click)="getHelperString($event.path[0].innerText);">
+                          I want to say hello
+                        </span>
+                    </mat-list-item>
+                </mat-list>
+            </mat-list>
+        </div>
+    </div>
+</section>
