@@ -928,13 +928,18 @@ Custom theme
 .dialog-resize-xl .mat-dialog-container {
     /*background-color: rgba(54, 56, 57, 1) !important;*/
     background-image: url(./assets/campaign/pages/1920/fondos-02.png) !important;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
 }
 
 .help-primary {
     background-color: #3f51b5 !important;
     font-size: 14px;
     font-family: 'Gotham-Book', serif
+}
+
+::ng-deep .mat-menu-panel {
+    padding: 0 10px!important;
+    width: 100%!important;
 }
 
 

@@ -44,6 +44,8 @@ export class MarketingModalComponent implements OnInit {
     if (CampaignTicket.invalid) {
       throw new Error('The form is invalid');
     }
-    console.log(CampaignTicket.value);
+    CampaignTicket.reset();
+    this.dialogRef.close();
+    alert('demo completada');
   }
 }

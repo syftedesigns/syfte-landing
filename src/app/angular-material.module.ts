@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatError} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatError, MatMenuModule} from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
@@ -19,6 +19,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatListModule} from '@angular/material/list';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -42,7 +43,8 @@ import {MatListModule} from '@angular/material/list';
     MatTableModule,
     MatIconModule,
     MatProgressSpinnerModule,
-    MatListModule
+    MatListModule,
+    MatMenuModule
   ],
   exports: [
     MatButtonModule,
@@ -65,7 +67,8 @@ import {MatListModule} from '@angular/material/list';
     MatTableModule,
     MatIconModule,
     MatProgressSpinnerModule,
-    MatListModule
+    MatListModule,
+    MatMenuModule
   ],
   declarations: []
 })
