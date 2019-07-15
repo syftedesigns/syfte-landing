@@ -8,6 +8,7 @@ import { MarketingModalComponent } from './marketing-modal/marketing-modal.compo
 import { WebModalComponent } from './web-modal/web-modal.component';
 import { AngularMaterialModule } from '../../../angular-material.module';
 import { GeneratorTextComponent } from './marketing-modal/generator-text.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { GeneratorTextComponent } from './marketing-modal/generator-text.compone
     EcommerceModalComponent,
     MarketingModalComponent,
     WebModalComponent,
-    GeneratorTextComponent
+    GeneratorTextComponent,
+    LoaderComponent
   ],
   exports: [
     AppModalComponent,
@@ -29,7 +31,8 @@ import { GeneratorTextComponent } from './marketing-modal/generator-text.compone
     EcommerceModalComponent,
     MarketingModalComponent,
     WebModalComponent,
-    GeneratorTextComponent
+    GeneratorTextComponent,
+    LoaderComponent
   ],
   entryComponents: [
     AppModalComponent,
@@ -37,7 +40,8 @@ import { GeneratorTextComponent } from './marketing-modal/generator-text.compone
     EcommerceModalComponent,
     MarketingModalComponent,
     WebModalComponent,
-    GeneratorTextComponent
+    GeneratorTextComponent,
+    LoaderComponent
   ]
 })
 export class RenderModalsModule { }

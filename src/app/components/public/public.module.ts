@@ -11,6 +11,7 @@ import { RenderModalsModule } from './shared/render-modals.module';
 import { AngularMaterialModule } from '../../angular-material.module';
 import { PublicRoutingModule } from './public.routes';
 import { StaticModule } from '../static/static.module';
+import { ParticlesModule } from 'angular-particle';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { StaticModule } from '../static/static.module';
     RenderModalsModule,
     AngularMaterialModule,
     PublicRoutingModule,
-    StaticModule
+    StaticModule,
+    ParticlesModule
   ],
   declarations: [
     BrandingComponent,

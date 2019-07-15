@@ -6,6 +6,7 @@ import { MenuService } from './menu/menu.service';
 import { ContactService } from './contact/contact.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CampaignsService } from './ads/campaigns.service';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { CampaignsService } from './ads/campaigns.service';
     SliderService,
     MenuService,
     ContactService,
-    CampaignsService
+    CampaignsService,
+    AuthService
   ]
 })
 export class ServicesModule { }

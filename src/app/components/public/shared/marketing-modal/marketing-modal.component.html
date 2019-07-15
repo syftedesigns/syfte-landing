@@ -35,7 +35,7 @@
                         <p>
                             <mat-form-field class="w-100 col-xl-6" appearance="outline">
                                 <mat-label class="LinotteRegular text-white">Your name</mat-label>
-                                <input type="text" required name="name" class="text-white LinotteRegular" matInput>
+                                <input type="text" ngModel required name="name" class="text-white LinotteRegular" matInput>
                             </mat-form-field>
                         </p>
                         <p>
@@ -51,6 +51,7 @@
                         </div>
                         <fieldset>
                             <input [(ngModel)]="campaignType" type="hidden" name="campaign_type">
+                            <input type="hidden" name="lang" ngModel="english" value="english">
                         </fieldset>
                     </form>
                 </div>

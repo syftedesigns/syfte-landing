@@ -38,7 +38,7 @@
     <meta property="og:url" content="https://www.syftedesigns.com" />
     <meta property="og:title" content="Syfte | We build your brand" />
     <meta property="og:description" content="At Syfte we build your dreamed company applying visual and web design, development, branding and marketing jointly to your ideas." />
-    <meta property="og:image" content="./assets/favicon/syfte-card.png" />
+    <meta property="og:image" content="https://www.syftedesigns.com/assets/favicon/syfte-card.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="600" />
     <meta property="og:image:height" content="400" />
@@ -391,7 +391,9 @@
         }
         gtag('js', new Date());
 
-        gtag('config', 'UA-137507086-1');
+        gtag('config', 'UA-137507086-1', {
+            'optimize_id': 'GTM-PWF4HDS'
+        });
     </script>
     <!-- Google Tag Manager -->
     <script>
@@ -411,6 +413,39 @@
         })(window, document, 'script', 'dataLayer', 'GTM-N3TMG9L');
     </script>
     <!-- End Google Tag Manager -->
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '816153678767013');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=816153678767013&ev=PageView&noscript=1"
+      /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <script>
+        fbq('track', 'ViewContent', {
+            value: 1,
+            currency: 'USD',
+        });
+    </script>
 </head>
 
 <body>

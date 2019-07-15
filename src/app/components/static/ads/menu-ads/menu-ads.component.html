@@ -1,5 +1,5 @@
 <!-- Campaign menu desktop -->
-<nav *ngIf="_ads.showMenuCampaign" class="navbar navbar-expand-lg navbar-dark d-none d-xl-flex">
+<!--<nav *ngIf="_ads.showMenuCampaign" class="navbar navbar-expand-lg navbar-dark d-none d-xl-flex">
     <div class="container">
         <a class="navbar-brand" [routerLink]="['/']">
             <img src="./assets/campaign/pages/marketing/1920/Logo-03.png" class="navbar-brand-img d-none d-lg-block" alt="Make your own business with Syfte">
@@ -140,142 +140,162 @@
                                 </i>
                             </div>
                             <div class="ml-4">
-                                <!-- Heading -->
-                                <h6 class="font-weight-bold text-uppercase text-primary mb-0">
-                                    <a [routerLink]="['/contact']">
+<h6 class="font-weight-bold text-uppercase text-primary mb-0">
+    <a [routerLink]="['/contact']">
                                         Prices
                                     </a>
-                                </h6>
-                                <p class="font-size-sm text-gray-700 mb-0">
-                                    Get a budget for your startup
-                                </p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="d-flex align-items-center text-decoration-none" onclick="return false;">
-                            <div class="icon icon-sm text-primary">
-                                <i class="material-icons">
+</h6>
+<p class="font-size-sm text-gray-700 mb-0">
+    Get a budget for your startup
+</p>
+</div>
+</div>
+<hr>
+<div class="d-flex align-items-center text-decoration-none" onclick="return false;">
+    <div class="icon icon-sm text-primary">
+        <i class="material-icons">
                                     insert_link
                                 </i>
-                            </div>
-                            <div class="ml-4">
-                                <h6 class="font-weight-bold text-uppercase text-primary mb-0">
-                                    Terms
-                                </h6>
-                                <p class="font-size-sm text-gray-700 mb-0">
-                                    Terms of Use & Privacy Policy
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            <a class="navbar-btn btn btn-sm  lift ml-auto btn-trial text-white pointer" target="_blank">
-              Budget my project
-            </a>
-        </div>
     </div>
-</nav>
+    <div class="ml-4">
+        <h6 class="font-weight-bold text-uppercase text-primary mb-0">
+            Terms
+        </h6>
+        <p class="font-size-sm text-gray-700 mb-0">
+            Terms of Use & Privacy Policy
+        </p>
+    </div>
+</div>
+</div>
+</li>
+</ul>
+<a [routerLink]="['/contact']" class="navbar-btn btn btn-sm  lift ml-auto btn-trial text-white pointer">
+                Contact us
+            </a>
+</div>
+</div>
+</nav>-->
 <!-- End campaign menu desktop -->
 <!-- menu responsive -->
-<mat-toolbar class="d-xl-none transparent-bg">
+<!-- End campaign menu desktop -->
+<!-- menu responsive -->
+<mat-toolbar class="transparent-bg menu-sticky menu-mg">
     <mat-toolbar-row>
-        <div class="space-20"></div>
-        <span class="example-spacer"></span>
-        <button cdkFocusInitial class="btn-block" id="button-menu" [matMenuTriggerFor]="menu" mat-icon-button>
-            <mat-icon  class="example-icon font-36 text-white pointer offset-md-11 offset-10" aria-hidden="false" aria-label="Menu Responsive">
-                menu
+        <div class="space-30"></div>
+        <button style="background-color: rgba(99, 100, 101, 0.8); border-radius: 50%" onclick="$(`#button-menu`).trigger('click');" [matMenuTriggerFor]="menu" cdkFocusInitial mat-fab color="primary">
+            <mat-icon class="example-icon font-24 text-white pointer">
+                  apps
             </mat-icon>
         </button>
         <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-sm text-center">
-                        <mat-menu xPosition="before" #menu="matMenu">
+                    <div class="col-sm text-left">
+                        <mat-menu #menu="matMenu">
                             <button class="btn-block" [matMenuTriggerFor]="services" mat-menu-item>
-                                          <mat-icon>group_work</mat-icon>
-                                          <span>Services</span>
-                                        </button>
+                                        <mat-icon>group_work</mat-icon>
+                                        <span>Services</span>
+                                      </button>
                             <button class="btn-block" [matMenuTriggerFor]="website" mat-menu-item>
-                                          <mat-icon>dvr</mat-icon>
-                                          <span>Website</span>
-                                        </button>
+                                        <mat-icon>dvr</mat-icon>
+                                        <span>Website</span>
+                                      </button>
                             <button class="btn-block" [matMenuTriggerFor]="social" mat-menu-item>
-                                          <mat-icon>share</mat-icon>
-                                          <span>Social</span>
-                                </button>
-                            <button class="btn-block" [matMenuTriggerFor]="lang" mat-menu-item>
-                                        <mat-icon>public</mat-icon>
-                                        <span>Language</span>
+                                        <mat-icon>share</mat-icon>
+                                        <span>Social</span>
                               </button>
+                            <button class="btn-block" [matMenuTriggerFor]="lang" mat-menu-item>
+                                      <mat-icon>public</mat-icon>
+                                      <span>Language</span>
+                            </button>
                         </mat-menu>
                         <!-- services menu -->
                         <mat-menu #services="matMenu">
-                            <button [routerLink]="['/campaign/branding']" mat-menu-item>
+                            <button mat-menu-item>
+                                <a href="https://www.syftedesigns.com/campaign/branding">
                                     <mat-icon>style</mat-icon>
                                     Branding
+                                </a>
                                 </button>
-                            <button [routerLink]="['/campaign/website']" mat-menu-item>
+                            <button mat-menu-item>
+                                <a href="https://www.syftedesigns.com/campaign/website">
                                     <mat-icon>laptop_windows</mat-icon>
                                     Website
-                                </button>
-                            <button [routerLink]="['/campaign/ecommerce']" mat-menu-item>
+                                </a>
+                            </button>
+                            <button mat-menu-item>
+                                <a href="https://www.syftedesigns.com/campaign/ecommerce">
                                     <mat-icon>shopping_cart</mat-icon>
                                     E-commerce
-                                </button>
-                            <button [routerLink]="['/campaign/apps']" mat-menu-item>
+                                </a>
+                            </button>
+                            <button mat-menu-item>
+                                <a href="https://www.syftedesigns.com/campaign/applications">
                                     <mat-icon>android</mat-icon>
                                     Applications
-                                </button>
-                            <button [routerLink]="['/campaign/marketing']" mat-menu-item>
+                                </a>
+                            </button>
+                            <button mat-menu-item>
+                                <a href="https://www.syftedesigns.com/campaign/marketing">
                                     <mat-icon>bookmarks</mat-icon>
                                     Marketing
-                                </button>
+                                </a>
+                            </button>
                         </mat-menu>
                         <!-- end services menu -->
                         <mat-menu #website="matMenu">
-                            <button [routerLink]="['/']" mat-menu-item>
+                            <button mat-menu-item>
+                                <a href="https://www.syftedesigns.com/">
                                     <mat-icon>home</mat-icon>
                                     Home
-                                </button>
-                            <button [routerLink]="['/about']" mat-menu-item>
+                                </a>
+                              </button>
+                            <button mat-menu-item>
+                                <a href="https://www.syftedesigns.com/about">
                                     <mat-icon>business</mat-icon>
                                     About Us
-                                </button>
-                            <button [routerLink]="['/contact']" mat-menu-item>
+                                </a>
+                              </button>
+                            <button mat-menu-item>
+                                <a href="https://www.syftedesigns.com/contact">
                                     <mat-icon>room</mat-icon>
                                     Contact
-                                </button>
+                                </a>
+                              </button>
                         </mat-menu>
                         <mat-menu #social="matMenu">
                             <button mat-menu-item>
-                                        <mat-icon>fiber_manual_record</mat-icon>
-                                        <a class="link-text" href="https://twitter.com/DesignsSyfte" target="_blank">
-                                            Facebook
-                                        </a>
-                                    </button>
+                                      <mat-icon>fiber_manual_record</mat-icon>
+                                      <a class="link-text" href="https://twitter.com/DesignsSyfte" target="_blank">
+                                          Facebook
+                                      </a>
+                                  </button>
                             <button mat-menu-item>
-                                        <mat-icon>fiber_manual_record</mat-icon>
-                                        <a class="link-text" href="https://www.instagram.com/syftedesigns/?hl=es" target="_blank">
-                                            Instagram
-                                        </a>
-                                    </button>
+                                      <mat-icon>fiber_manual_record</mat-icon>
+                                      <a class="link-text" href="https://www.instagram.com/syftedesigns/?hl=es" target="_blank">
+                                          Instagram
+                                      </a>
+                                  </button>
                             <button mat-menu-item>
-                                        <mat-icon>fiber_manual_record</mat-icon>
-                                        <a class="link-text" href="https://www.facebook.com/syftedesigns/" target="_blank">
-                                            Twitter
-                                        </a>
-                                    </button>
+                                      <mat-icon>fiber_manual_record</mat-icon>
+                                      <a class="link-text" href="https://www.facebook.com/syftedesigns/" target="_blank">
+                                          Twitter
+                                      </a>
+                                  </button>
                         </mat-menu>
                         <mat-menu #lang="matMenu">
                             <button mat-menu-item>
+                                <a [href]="URL_PATH">
                                     <mat-icon>compare_arrows</mat-icon>
                                     Spanish
-                                </button>
+                                </a>
+                              </button>
                             <button mat-menu-item>
+                                <a [href]="URL_VIEW">
                                     <mat-icon>compare_arrows</mat-icon>
                                     English
-                                </button>
+                                </a>
+                              </button>
                         </mat-menu>
                     </div>
                 </div>
@@ -283,3 +303,5 @@
         </section>
     </mat-toolbar-row>
 </mat-toolbar>
+<button style="z-index: -1; opacity: 0;" cdkFocusInitial class="btn-block" id="button-menu" [matMenuTriggerFor]="menu" mat-icon-button>
+</button>

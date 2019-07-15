@@ -22,10 +22,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
   ngOnInit() {
     // you can subscribe to WOW observable to react when an element is revealed
-    this.wowSubscription = this.wowService.itemRevealed$.subscribe(
-      (item: any) => {
-        // do whatever you want with revealed element
-      });
+    this.wowSubscription = this.wowService.itemRevealed$.subscribe();
   }
   ngOnDestroy() {
     // unsubscribe (if necessary) to WOW observable to prevent memory leaks

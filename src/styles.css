@@ -635,7 +635,7 @@ Custom theme
     Ads campaign
     */
     .ads-theme-marketing {
-        background-image: url(./assets/campaign/pages/1920/fondos-02.png) !important;
+        background-image: url(./assets/campaign/pages/1920/bg-min.jpg) !important;
         background-repeat: no-repeat
     }
 }
@@ -712,7 +712,7 @@ Custom theme
     Ads campaign
     */
     .ads-theme-marketing {
-        background-image: url(./assets/campaign/pages/768/vector-mkt.png) !important;
+        background-image: url(./assets/campaign/pages/768/Tablet-min.jpg) !important;
         background-repeat: no-repeat;
     }
 }
@@ -723,7 +723,7 @@ Custom theme
 
 /* Mobile */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 800px) {
     .theme-ux {
         background-color: #e6e5e4;
     }
@@ -748,9 +748,8 @@ Custom theme
         background-color: #e4e3e1;
     }
     .ads-theme-marketing {
-        background-image: url(./assets/campaign/pages/480/vector-mobile-mkt.png) !important;
+        background-image: url(./assets/campaign/pages/480/bg-mobile-update.jpg) !important;
         background-repeat: no-repeat;
-        background-size: cover
     }
 }
 
@@ -940,6 +939,10 @@ Custom theme
 ::ng-deep .mat-menu-panel {
     padding: 0 10px!important;
     width: 100%!important;
+}
+
+.mat-snack-bar-container {
+    max-width: 100% !important;
 }
 
 
