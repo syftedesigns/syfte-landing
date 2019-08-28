@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { CasesComponent } from './cases/cases.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormSendComponent } from './form-send/form-send.component';
+import { PolicyComponent } from './policy/policy.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,11 @@ const routes: Routes = [
         path: 'contact',
         component: ContactComponent,
         data: {Title: 'Contact Us'}
+    },
+    {
+      path: 'policy',
+      component: PolicyComponent,
+      data: {Title: 'Terms and conditions'}
     },
     {
         path: 'thank',

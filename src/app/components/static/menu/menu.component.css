@@ -78,7 +78,10 @@ ul li>.nav-link:hover {
 }
 
 .menu-overlay {
-    background-color: #34353b;
+    /*background-color: #191919;*/
+    background-image: url(../../../../assets/images/desktop/bg-menu.png);
+    background-size: cover;
+    background-position: bottom;
     color: #ffff;
     height: 100%;
     width: 100%;

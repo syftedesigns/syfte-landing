@@ -3,9 +3,9 @@ import { SliderService } from 'src/app/services/slideshow/slider.service';
 import { SlideComponent } from 'src/app/classes/slide.class';
 import { DOCUMENT } from '@angular/platform-browser';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatSnackBar } from '@angular/material';
+import { PartialObserver } from 'rxjs';
 import * as $ from 'jquery';
 import { VideoModalComponent } from '../static/video/video-modal.component';
-import { PartialObserver } from 'rxjs';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -19,18 +19,18 @@ export class HomeComponent implements OnInit, OnDestroy {
               @Inject(DOCUMENT) private _document: Document,
               private dialog: MatDialog,
               private snackBar: MatSnackBar) {
-    setTimeout((): void => {
+    /*setTimeout((): void => {
       if (!this._slide.Destroyed) {
         this._slide.ChangingManualSlider.emit(false);
       } else {
        this._slide.ChangingManualSlider.emit(true);
        this._slide.Destroyed = false;
       }
-    }, 500);
+    }, 500);*/
   }
 
   async ngOnInit() {
-    this._slide.ChangingManualSlider.subscribe({
+  /*  this._slide.ChangingManualSlider.subscribe({
       next: async (BooleanValue: boolean) => {
         if (BooleanValue) {
           // Significa que le dio a alguna flecha
@@ -63,11 +63,11 @@ export class HomeComponent implements OnInit, OnDestroy {
           return;
         }
       }
-    });
+    });*/
   }
   ngOnDestroy() {
     // Destruimos todo
-    this._document.body.removeAttribute('class');
+    /*this._document.body.removeAttribute('class');
     this._slide._slideIems = [];
     this.SlidePages = [];
     this._slide.currentPosition = 0;
@@ -75,7 +75,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.currentPage = 0;
     this._slide.interval.unsubscribe();
     this._slide.Destroyed = true;
-    this._slide.ChangingManualSlider.emit(false);
+    this._slide.ChangingManualSlider.emit(false);*/
   }
   CreateSlideItems(): Promise<boolean> {
     return new Promise((resolve, reject) => {
@@ -150,7 +150,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
     dialog.afterClosed().subscribe(
       (observer: PartialObserver<any> | any): void => {
-        this.snackBar.open('Thanks for watching!', null, {
+        this.snackBar.open('Gracias por vernos!', null, {
           duration: 3000,
           panelClass: ['success-snackbar']
         });

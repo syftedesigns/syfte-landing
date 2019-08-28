@@ -1,92 +1,91 @@
 <!-- Sticky slider -->
 <div id="wrapper" class="main">
     <div class="container-fluid">
-        <div *ngFor="let app of SlidePages">
-            <app-marketing *ngIf="app.reference === 'marketing' && app.Displayed"></app-marketing>
-            <app-ux *ngIf="app.reference === 'ux' && app.Displayed"></app-ux>
-            <app-web-design *ngIf="app.reference === 'web_design' && app.Displayed"></app-web-design>
-            <app-branding *ngIf="app.reference === 'branding' && app.Displayed"></app-branding>
-            <app-app *ngIf="app.reference === 'app' && app.Displayed"></app-app>
-            <app-visual *ngIf="app.reference === 'visual' && app.Displayed"></app-visual>
-            <app-backend *ngIf="app.reference === 'backend' && app.Displayed"></app-backend>
-            <app-advertising *ngIf="app.reference === 'adword' && app.Displayed"></app-advertising>
-        </div>
+        <section>
+            <app-home-video></app-home-video>
+        </section>
+        <!-- video home -->
+        <!-- end video home -->
+        <!--<div *ngFor="let app of SlidePages">
+                <app-marketing *ngIf="app.reference === 'marketing' && app.Displayed"></app-marketing>
+                <app-ux *ngIf="app.reference === 'ux' && app.Displayed"></app-ux>
+                <app-web-design *ngIf="app.reference === 'web_design' && app.Displayed"></app-web-design>
+                <app-branding *ngIf="app.reference === 'branding' && app.Displayed"></app-branding>
+                <app-app *ngIf="app.reference === 'app' && app.Displayed"></app-app>
+                <app-visual *ngIf="app.reference === 'visual' && app.Displayed"></app-visual>
+                <app-backend *ngIf="app.reference === 'backend' && app.Displayed"></app-backend>
+                <app-advertising *ngIf="app.reference === 'adword' && app.Displayed"></app-advertising>
+            </div>-->
         <!-- end sticky slider -->
     </div>
     <div class="space-80"></div>
     <!-- cases services -->
-    <section class="bg-landing d-none d-xl-block section-cut">
+    <section class="bg-landing d-none d-xl-block section-cut w-100">
         <div class="space-180"></div>
         <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <h1 class="Aquatico-Regular font-45 text-center landing-titles wow slideInLeft">
-                        We make <br> experience
+            <div class="row text-center">
+                <div class="col-sm text-center">
+                    <h1 class="Aquatico-Regular font-32 text-center landing-titles wow slideInLeft">
+                        We enhance the reach <br> of your business.
                     </h1>
                     <div class="space-30"></div>
                     <article class="wow slideInLeft">
                         <p class="LinotteLight font-20 landing-texts about-texts text-center">
-                            We talk with our clients to carefully explore <strong>ideas, goals and objectives</strong> and advise them so that they can transform everything into a business with solid pillars joining <strong>Web design, UX/UI, Branding, Visual Design and marketing campaigns to create an
-                            unforgettable experience!</strong>
+                            We integrate <b>Analytics</b> tools, where we can <b>evaluate the behavior of users with your business</b> and based on this, <b>create a sales strategy based on Flywheel</b>, to be able to scale and create the famous “snowball”
+                            effect.
                         </p>
-                        <button style="margin-left: 28%" class="text-uppercase btn-block btn-movie LinotteRegular col-xl-5 text-center btn-watch-d" (click)="openVideo(1024, 500);" mat-raised-button color="primary">
+                        <button style="margin-left: 37%" class="text-uppercase btn-block btn-movie LinotteRegular col-xl-3 text-center btn-watch-d" (click)="openVideo(1024, 500);" mat-raised-button color="primary">
                                 <i class="material-icons">
                                         play_arrow
                                 </i>&nbsp;
                             Watch video                    
                         </button>
-                        <button style="margin-left: 28%" class="text-uppercase btn-block btn-movie LinotteRegular col-xl-5 text-center btn-watch-d2" (click)="openVideo(975, 500);" mat-raised-button color="primary">
+                        <button style="margin-left: 37%" class="text-uppercase btn-block btn-movie LinotteRegular col-xl-3 text-center btn-watch-d2" (click)="openVideo(975, 500);" mat-raised-button color="primary">
                                 <i class="material-icons">
                                         play_arrow
                                 </i>&nbsp;
                             Watch video                    
                         </button>
                     </article>
-                </div>
-                <div class="col-sm">
-                    <figure class="wow slideInRight">
-                        <img style="border: 0px; margin-top: -10%" class="img-thumbnail figure-animate" src="./assets/images/desktop/video-nosymbol.png" alt="Agency dedicated to create marketing strategies">
-                    </figure>
                 </div>
             </div>
             <div class="space-200"></div>
             <div class="space-100"></div>
             <div class="row">
                 <div class="col-sm">
-                    <figure class="wow slideInUp">
-                        <img style="border: 0px; margin-top: -20%" class="img-thumbnail figure-animate" src="./assets/images/desktop/dibujo-02.png" alt="Apps development">
-                    </figure>
-                </div>
-                <div class="col-sm case2">
                     <h1 class="Aquatico-Regular font-45 text-center landing-titles wow slideInLeft">
-                        An idea <br> on your hands
+                        Marketing Automation
                     </h1>
                     <div class="space-30"></div>
                     <article class="wow slideInLeft">
                         <p class="LinotteLight font-20 landing-texts about-texts text-center">
-                            Take your business with you always through an app and monitor the operations of your business just by looking at your phone. At <strong>Syfte we apply portability a lot and we migrate the full potential of your business</strong>                            to a mobile device and synchronize it in the cloud.
+                            <b>We optimize all the tasks and processes that your business needs to sell</b>, through tools and software that our development team implements in your business, with the objective that <b>you only have to take care of monitoring the results.</b>
                         </p>
                     </article>
+                </div>
+                <div class="col-sm">
+                    <figure class="wow slideInUp offset-xl-1">
+                        <img style="border: 0px" class="img-thumbnail w-100" title="Herramientas y Software de marketing" src="./assets/images/desktop/marketing-automation.gif" alt="Marketing-Automation">
+                    </figure>
                 </div>
             </div>
             <div class="space-200"></div>
             <div class="space-50"></div>
             <div class="row">
                 <div class="col-sm">
-                    <h1 class="Aquatico-Regular font-45 text-center landing-titles wow slideInLeft">
-                        Your goal <br> in a system
+                    <h1 class="LinotteRegular font-45 text-center landing-titles wow slideInLeft">
+                        Marketing & Logistics
                     </h1>
                     <div class="space-30"></div>
                     <article class="wow slideInLeft">
                         <p class="LinotteLight font-20 landing-texts about-texts text-center">
-                            In <strong>Syfte, we build CRUDS, Real-time Data, PWA (Progressive Web App), REST API, systems with NodeJS, Express, Java, .NET, PHP,</strong> among others. We offer each technologies in particular according to the customer&#39;s
-                            need.
+                            We outline your business and devise a <b>marketing plan and divide it into a series of strategies, tactics and objectives</b> based on automating the entire <b>sales process your business needs in digital media</b>.
                         </p>
                     </article>
                 </div>
                 <div class="col-sm">
                     <figure class="offset-xl-1 wow slideInUp">
-                        <img class="backend-figure figure-animate" src="./assets/images/desktop/backend-image.png" alt="Systems development">
+                        <img class="backend-figure figure-animate" title="Marketing y Logistica" src="./assets/images/desktop/marketing-logistic.gif" alt="Marketing-Logistic">
                     </figure>
                 </div>
             </div>
@@ -95,72 +94,66 @@
     </section>
     <!-- end cases services -->
     <!-- cases tablet -->
-    <section class="d-none d-md-block d-xl-none bg-white hover-hidden section-cut">
+    <section class="d-none d-md-block d-xl-none bg-white hover-hidden section-cut bg-landing">
         <div class="space-180"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md">
                     <h1 class="Aquatico-Regular font-36  text-center landing-titles wow slideInLeft">
-                        We make <br> experience
+                        Potenciamos el <br> alcance de tu negocio
                     </h1>
                     <div class="space-30"></div>
                     <article class="wow slideInLeft">
                         <p class="LinotteLight font-16 landing-texts about-texts text-center">
-                            We talk with our clients to carefully explore <strong>ideas, goals and objectives</strong> and advise them so that they can transform everything into a business with solid pillars joining <strong>Web design, UX/UI, Branding, Visual Design and marketing campaigns to create an
-                            unforgettable experience!</strong>
+                            We integrate <b>Analytics</b> tools, where we can <b>evaluate the behavior of users with your business</b> and based on this, <b>create a sales strategy based on Flywheel</b>, to be able to scale and create the famous “snowball”
+                            effect.
                         </p>
-                        <button class="text-uppercase btn-block btn-movie LinotteRegular col-lg-5  text-center btn-watch-m" (click)="openVideo(560, 500);" mat-raised-button color="primary">
+                        <button style="margin-left: 30%" class="text-uppercase btn-block btn-movie LinotteRegular col-md-5 col-lg-4  text-center" (click)="openVideo(560, 500);" mat-raised-button color="primary">
                                 <i class="material-icons">
                                         play_arrow
                                 </i>&nbsp;
-                            Watch video                    
+                            Mira el video        
                         </button>
                     </article>
-                </div>
-                <div class="col-md">
-                    <figure>
-                        <img class="margin-case1 wow slideInRight" style="width: 130%;" src="./assets/images/tablet/video-02-02.png" alt="Agency dedicated to create marketing strategies">
-                    </figure>
                 </div>
             </div>
             <div class="space-200"></div>
             <div class="row">
                 <div class="col-md">
-                    <figure>
-                        <img class="margin-case1 wow slideInUp" style="width: 130%; margin-left: -20%" src="./assets/images/tablet/dibujo-02-02.png" alt="Apps development">
-                    </figure>
-                </div>
-                <div class="col-md">
                     <h1 class="Aquatico-Regular font-32  text-center landing-titles wow slideInLeft">
-                        An idea on your hands
+                        Marketing Automation
                     </h1>
                     <div class="space-30"></div>
                     <article class="wow slideInLeft">
                         <p class="LinotteLight font-16 landing-texts about-texts text-center">
-                            Take your business with you always through an app and monitor the operations of your business just by looking at your phone. At <strong>Syfte we apply portability a lot and we migrate the full potential of your business</strong>to
-                            a mobile device and synchronize it in the cloud.
+                            <b>We optimize all the tasks and processes that your business needs to sell</b>, through tools and software that our development team implements in your business, with the objective that <b>you only have to take care of monitoring the results.</b>
                         </p>
                     </article>
+                </div>
+                <div class="col-md">
+                    <figure>
+                        <img style="border: 0px" class="img-thumbnail w-100 backend-figure" title="Herramientas y Software de marketing" src="./assets/images/desktop/marketing-automation.gif" alt="Marketing-Automation">
+                    </figure>
                 </div>
             </div>
             <div class="space-200"></div>
             <div class="space-10"></div>
-            <div class="row">
+            <div style="margin-top: -10em" class="row">
                 <div class="col-md">
-                    <h1 class="Aquatico-Regular font-36  text-center landing-titles wow slideInLeft">
-                        Your goal <br> in a system
+                    <h1 class="LinotteRegular font-45  text-center landing-titles wow slideInLeft">
+                        Marketing & Logistics
                     </h1>
                     <div class="space-30"></div>
                     <article class="wow slideInLeft">
                         <p class="LinotteLight font-16 landing-texts about-texts text-center">
-                            In <strong>Syfte, we build CRUDS, Real-time Data, PWA (Progressive Web App), REST API, systems with NodeJS, Express, Java, .NET, PHP,</strong> among others. We offer each technologies in particular according to the customer&#39;s
-                            need.
+                            We outline your business and devise a <b>marketing plan and divide it into a series of strategies, tactics and objectives</b> based on automating the entire <b>sales process your business needs in digital media</b>.
                         </p>
                     </article>
                 </div>
                 <div class="col-md">
                     <figure>
-                        <img class="margin-case1 wow slideInUp" style="width: 130%; margin-left: -10%" src="./assets/images/tablet/backend-figure.png" alt="Systems development">
+                        <div class="space-80 d-lg-none"></div>
+                        <img class="backend-figure figure-animate w-100" title="Marketing y Logistica" src="./assets/images/desktop/marketing-logistic.gif" alt="Marketing-Logistic">
                     </figure>
                 </div>
             </div>
@@ -169,69 +162,62 @@
     </section>
     <!-- end cases tablet -->
     <!-- cases mobile -->
-    <section class="d-md-none hover-hidden bg-white section-cut">
+    <section class="d-md-none hover-hidden bg-landing section-cut">
         <div class="space-100"></div>
         <div class="container">
             <div class="col text-center">
-                <h1 class="Aquatico-Regular font-36  text-center landing-titles wow slideInLeft">
-                    We make <br> experience
+                <h1 class="Aquatico-Regular font-22  text-center landing-titles wow slideInLeft">
+                    Potenciamos el <br> alcance de tu negocio
                 </h1>
                 <div class="space-30"></div>
                 <article class="wow slideInLeft">
                     <p class="LinotteLight font-16 landing-texts about-texts text-center">
-                        We talk with our clients to carefully explore <strong>ideas, goals and objectives</strong> and advise them so that they can transform everything into a business with solid pillars joining <strong>Web design, UX/UI, Branding, Visual Design and marketing campaigns to create an
-                        unforgettable experience!</strong>
+                        We integrate <b>Analytics</b> tools, where we can <b>evaluate the behavior of users with your business</b> and based on this, <b>create a sales strategy based on Flywheel</b>, to be able to scale and create the famous “snowball”
+                        effect.
                     </p>
                     <button class="text-uppercase btn-block btn-movie LinotteRegular col-9  text-center btn-watch-m" (click)="openVideo(270, 300);" mat-raised-button color="primary">
                             <i class="material-icons">
                                     play_arrow
                             </i>&nbsp;
-                        Watch video                    
+                        Mira el video                
                     </button>
                 </article>
             </div>
             <div class="space-50"></div>
-            <div class="col text-center">
-                <figure class="wow slideInUp">
-                    <img src="./assets/images/mobile/video-02.png" alt="Agency dedicated to create marketing strategies">
-                </figure>
-            </div>
             <div class="space-30"></div>
             <div class="col text-center">
-                <h1 class="Aquatico-Regular font-36  text-center landing-titles wow slideInLeft">
-                    An idea <br> on your hands
+                <h1 class="Aquatico-Regular font-25  text-center landing-titles wow slideInLeft">
+                    Marketing Automation
                 </h1>
                 <div class="space-30"></div>
                 <article class="wow slideInLeft">
                     <p class="LinotteLight font-16 landing-texts about-texts text-center">
-                        Take your business with you always through an app and monitor the operations of your business just by looking at your phone. At <strong>Syfte we apply portability a lot and we migrate the full potential of your business</strong>to
-                        a mobile device and synchronize it in the cloud.
+                        <b>We optimize all the tasks and processes that your business needs to sell</b>, through tools and software that our development team implements in your business, with the objective that <b>you only have to take care of monitoring the results.</b>
                     </p>
                 </article>
             </div>
             <div class="space-50"></div>
             <div class="col text-center">
                 <figure class="wow slideInUp">
-                    <img src="./assets/images/mobile/dibujo-02.png" alt="Apps development">
+                    <img style="margin-left: -3em" src="./assets/images/mobile/marketing-automation-mobile.gif" alt="Desarrollo de aplicaciones">
                 </figure>
             </div>
             <div class="space-80"></div>
             <div class="col text-center">
-                <h1 class="Aquatico-Regular font-36  text-center landing-titles wow slideInLeft">
-                    Your goal <br> in a system
+                <h1 class="LinotteRegular font-36  text-center landing-titles wow slideInLeft">
+                    Marketing & Logistics
                 </h1>
                 <div class="space-30"></div>
                 <article class="wow slideInLeft">
                     <p class="LinotteLight font-16 landing-texts about-texts text-center">
-                        In <strong>Syfte, we build CRUDS, Real-time Data, PWA (Progressive Web App), REST API, systems with NodeJS, Express, Java, .NET, PHP,</strong> among others. We offer each technologies in particular according to the customer&#39;s
-                        need.
+                        We outline your business and devise a <b>marketing plan and divide it into a series of strategies, tactics and objectives</b> based on automating the entire <b>sales process your business needs in digital media</b>.
                     </p>
                 </article>
             </div>
             <div class="space-50"></div>
             <div class="col text-center">
                 <figure class="wow slideInUp">
-                    <img src="./assets/images/mobile/bg-backend.png" alt="Systems developmen">
+                    <img src="./assets/images/mobile/marketing-logistic.gif" alt="Desarrollo de sistemas">
                 </figure>
             </div>
         </div>

@@ -1,3 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
+
+
 /*
 Fonts config
 */
@@ -136,6 +139,10 @@ Set Fonts fast
     font-size: 22px;
 }
 
+.font-12 {
+    font-size: 12px;
+}
+
 .font-17 {
     font-size: 17px;
 }
@@ -162,10 +169,6 @@ Set Fonts fast
 
 .font-16 {
     font-size: 16px;
-}
-
-.font-12 {
-    font-size: 12px;
 }
 
 .font-14 {
@@ -623,20 +626,12 @@ Custom theme
         background-repeat: no-repeat;
     }
     .theme-about {
-        background-image: url(./assets/images/desktop/Fondo-about.png);
-        background-size: cover;
+        background-image: url(./assets/images/desktop/contact-new-bg.png);
         background-repeat: no-repeat;
     }
     .theme-contact {
         background-image: url(./assets/images/desktop/contact-fixed.png);
         background-repeat: no-repeat;
-    }
-    /*
-    Ads campaign
-    */
-    .ads-theme-marketing {
-        background-image: url(./assets/campaign/pages/1920/bg-min.jpg) !important;
-        background-repeat: no-repeat
     }
 }
 
@@ -698,21 +693,14 @@ Custom theme
         background-repeat: no-repeat;
     }
     .theme-about {
-        background-image: url(./assets/images/tablet/Fondo-about.png);
-        background-size: cover;
-        background-repeat: no-repeat;
+        /*background-image: url(./assets/images/tablet/bg-about2.png);
+        background-repeat: no-repeat;*/
+        background-color: #191919;
     }
     .theme-contact {
         background-image: url(./assets/images/tablet/bg-tablet-contact.png);
         background-size: cover;
         background-position: center;
-        background-repeat: no-repeat;
-    }
-    /*
-    Ads campaign
-    */
-    .ads-theme-marketing {
-        background-image: url(./assets/campaign/pages/768/Tablet-min.jpg) !important;
         background-repeat: no-repeat;
     }
 }
@@ -723,7 +711,7 @@ Custom theme
 
 /* Mobile */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 480px) {
     .theme-ux {
         background-color: #e6e5e4;
     }
@@ -745,11 +733,7 @@ Custom theme
         background-color: #f4f4f4
     }
     .theme-about {
-        background-color: #e4e3e1;
-    }
-    .ads-theme-marketing {
-        background-image: url(./assets/campaign/pages/480/bg-mobile-update.jpg) !important;
-        background-repeat: no-repeat;
+        background-color: #191919;
     }
 }
 
@@ -900,8 +884,7 @@ Custom theme
 }
 
 .success-snackbar {
-    background: #0ea347;
-    text-align: center;
+    background: #0ea347
 }
 
 .show {
@@ -924,25 +907,8 @@ Custom theme
     background-color: rgba(54, 56, 57, 0.7) !important;
 }
 
-.dialog-resize-xl .mat-dialog-container {
-    /*background-color: rgba(54, 56, 57, 1) !important;*/
-    background-image: url(./assets/campaign/pages/1920/fondos-02.png) !important;
-    background-repeat: no-repeat;
-}
-
-.help-primary {
-    background-color: #3f51b5 !important;
-    font-size: 14px;
-    font-family: 'Gotham-Book', serif
-}
-
-::ng-deep .mat-menu-panel {
-    padding: 0 10px!important;
-    width: 100%!important;
-}
-
-.mat-snack-bar-container {
-    max-width: 100% !important;
+.text-bold {
+    font-weight: bold;
 }
 
 

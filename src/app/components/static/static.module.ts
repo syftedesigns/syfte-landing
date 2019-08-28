@@ -19,6 +19,7 @@ import { AngularMaterialModule } from 'src/app/angular-material.module';
 import { FormsModule } from '@angular/forms';
 import { VideoModalComponent } from './video/video-modal.component';
 import { MenuADSComponent } from './ads/menu-ads/menu-ads.component';
+import { HomeVideoComponent } from './video/home-video/home-video.component';
 
 @NgModule({
   imports: [
@@ -41,7 +42,8 @@ import { MenuADSComponent } from './ads/menu-ads/menu-ads.component';
     ButtonSliderComponent,
     ContactHistoryComponent,
     VideoModalComponent,
-    MenuADSComponent
+    MenuADSComponent,
+    HomeVideoComponent
   ],
   exports: [
     FooterComponent,
@@ -57,7 +59,8 @@ import { MenuADSComponent } from './ads/menu-ads/menu-ads.component';
     ButtonSliderComponent,
     ContactHistoryComponent,
     VideoModalComponent,
-    MenuADSComponent
+    MenuADSComponent,
+    HomeVideoComponent
   ],
   entryComponents: [
     AdvertisingComponent,
@@ -68,7 +71,8 @@ import { MenuADSComponent } from './ads/menu-ads/menu-ads.component';
     VisualComponent,
     WebDesignComponent,
     VideoModalComponent,
-    MenuADSComponent
+    MenuADSComponent,
+    HomeVideoComponent
   ]
 })
 export class StaticModule { }

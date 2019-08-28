@@ -2,11 +2,12 @@
 <div class="space-120 d-none d-md-block d-xl-none"></div>
 <div class="container">
     <div class="container-fluid">
-        <!-- desktop -->
-        <section class="d-none d-xl-block">
+        <!-- Desktop -->
+        <section class="text-center">
+            <div class="space-80 d-md-none"></div>
             <div class="row">
-                <div class="col-sm text-center">
-                    <h1 class="Aquatico-Regular font-65 about-title text-uppercase wow slideInLeft">
+                <div class="col-sm text-center offset-lg-5 d-none d-md-block">
+                    <h1 class="LinotteRegular font-65 about-title text-uppercase wow slideInLeft">
                         What is syfte?
                     </h1>
                     <article class="wow slideInLeft">
@@ -17,20 +18,11 @@
                         </p>
                     </article>
                 </div>
-                <div class="col-xl-6 wow bounceInRight">
-                    <img class="machine" style="margin-top: -40%" src="./assets/images/desktop/maquina-03.png" alt="About our Agency">
-                </div>
-            </div>
-        </section>
-        <!-- end desktop -->
-        <!-- tablet -->
-        <section class="d-none d-md-block d-xl-none ">
-            <div class="row">
-                <div class="col-md-5 text-center">
-                    <h1 class="Aquatico-Regular font-36 about-title text-uppercase wow slideInLeft">
+                <!-- mobile -->
+                <div class="col-sm text-center offset-lg-5 d-md-none">
+                    <h1 class="LinotteRegular font-32 about-title text-uppercase wow slideInLeft">
                         What is syfte?
                     </h1>
-                    <div class="space-15"></div>
                     <article class="wow slideInLeft">
                         <p class="LinotteLight font-16 text-color about-texts">
                             Syfte is a creative agency that arose due to the <strong>insufficiency and inexperience</strong> that customers had to keep a business afloat, it is very common that when creating a website that sells a product, or a virtual
@@ -39,299 +31,513 @@
                         </p>
                     </article>
                 </div>
-                <div class="col-sm">
-                    <img class="d-none d-md-block d-lg-none about-machine wow bounceInRight" src="./assets/images/tablet/maquina-02.png" alt="About our Agency">
-                    <img style="margin-top: -25%" class="d-none d-lg-block d-xl-none about-machine wow bounceInRight" src="./assets/images/tablet/maquina-02.png" alt="About our Agency">
-                </div>
+                <!-- end mobile-->
             </div>
-        </section>
-        <!-- end tablet -->
-    </div>
-</div>
-<!-- slider -->
-<section class="d-none d-xl-block hover-hidden">
-    <div class="row">
-        <div class="col-xl-12 wow bounceInUp">
-            <img class="circle-yellow" src="./assets/images/desktop/Personajes-2-03.png" alt="Corporate component of our agency.">
-            <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div (mouseleave)="DisplaySliderArrow = false;" (mouseover)="DisplaySliderArrow = true" class="carousel-item active">
-                        <img src="./assets/images/desktop/carlos.png" class="d-block  img-slider" alt="CEO of our agency">
-                        <div class="carousel-caption d-none d-md-block employ-slider">
-                            <h1 class="font-45 Gotham-Book about-title">Carlos Estarita</h1>
-                            <h5 class="font-18 Aquatico-Regular about-title">Founder & Project Manager</h5>
-                        </div>
-                    </div>
-                    <div (mouseleave)="DisplaySliderArrow = false;" (mouseover)="DisplaySliderArrow = true" class="carousel-item">
-                        <img src="./assets/images/desktop/maiky.png" class="d-block  img-slider" alt="Leader of marketing strategies">
-                        <div class="carousel-caption d-none d-md-block employ-slider">
-                            <h1 class="font-45 Gotham-Book about-title">Maiky Sanchez</h1>
-                            <h5 class="font-18 Aquatico-Regular about-title">Co-Founder & Sales Coordinator</h5>
-                        </div>
-                    </div>
-                    <div (mouseleave)="DisplaySliderArrow = false;" (mouseover)="DisplaySliderArrow = true" class="carousel-item">
-                        <img src="./assets/images/desktop/pablo.png" class="d-block  img-slider" alt="Creative Web Designer">
-                        <div class="carousel-caption d-none d-md-block employ-slider">
-                            <h1 class="font-45 Gotham-Book about-title">Pablo Vasquez</h1>
-                            <h5 class="font-18 Aquatico-Regular about-title">Graphic Designer</h5>
-                        </div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <img *ngIf="!DisplaySliderArrow" class="w-50 arrow-slider" src="./assets/images/desktop/flecha-02.png" alt="Change Patner">
-                </a>
-            </div>
-        </div>
-        <div class="col-sm text-center article-who">
-            <div class="space-180"></div>
-            <h1 class="Aquatico-Regular font-65 about-title text-uppercase wow slideInRight">
-                OUR MISSION
-            </h1>
-            <article>
-                <p class="LinotteLight font-20 text-color about-texts wow slideInRight">
-                    The goal of <strong>Syfte is to make your ideas and goals become true</strong>, help you create successful businesses through a work plan that we discuss with each client, each service we offer is a fundamental pillar that we transform
-                    into <strong>optimal experience and combining it with marketing strategies</strong>, it translates into Smart Websites and Apps.
-                </p>
-                <img style="margin-left: 65%; border:0px; background-color: #e5e4e3" class="img-thumbnail wow bounceInRight" src="./assets/images/desktop/personaje-03.png" alt="Branding creator">
-            </article>
-        </div>
-    </div>
-</section>
-<!-- end slider -->
-<!-- slider tablet -->
-<div class="space-80"></div>
-<section class="d-none d-md-block d-xl-none hover-hidden">
-    <div class="row">
-        <div class="col-sm wow slideInLeft">
-            <img style="margin-top: -0.6em; margin-left: 1em" src="./assets/images/tablet/personaje-2-02.png" alt="Cooperative component of our agency">
-            <div id="carouselTablet" class="carousel slide carousel-fade slider-position" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./assets/images/desktop/carlos.png" class="d-none d-md-block d-lg-none img-slider" alt="CEO of our agency">
-                        <img src="./assets/images/desktop/carlos.png" class="d-none d-md-none d-lg-block d-xl-none img-slider" alt="CEO of our agency">
-                        <div class="carousel-caption d-none d-md-block d-xl-none employ-slider">
-                            <h1 class="font-25 Gotham-Book about-title">Carlos Estarita</h1>
-                            <h5 class="font-18 LinotteRegular about-title">CEO & Project Manager</h5>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./assets/images/desktop/maiky.png" class="d-none d-md-block d-lg-none img-slider" alt="Leader of marketing strategies">
-                        <img src="./assets/images/desktop/maiky.png" class="d-none d-md-none d-lg-block d-xl-none img-slider" alt="Leader of marketing strategies">
-                        <div class="carousel-caption d-none d-md-block d-xl-none employ-slider">
-                            <h1 class="font-25 Gotham-Book about-title">Maiky Sanchez</h1>
-                            <h5 class="font-18 LinotteRegular about-title">Vicepresident</h5>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./assets/images/desktop/pablo.png" class="d-none d-md-block d-lg-none img-slider" alt="Creative Web Designer">
-                        <img src="./assets/images/desktop/pablo.png" class="d-none d-md-none d-lg-block d-xl-none img-slider" alt="Creative Web Designer">
-                        <div class="carousel-caption d-none d-md-block d-xl-none employ-slider">
-                            <h1 class="font-25 Gotham-Book about-title">Pablo Vasquez</h1>
-                            <h5 class="font-18 LinotteRegular about-title">Graphic Designer</h5>
-                        </div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselTablet" role="button" data-slide="prev">
-                    <img class="arrow-tablet" src="./assets/images/tablet/flecha-02.png" alt="Change Patner">
-                </a>
-            </div>
-        </div>
-        <div style="position: relative; left: -1em;" class="col-sm text-center">
-            <div class="space-50"></div>
-            <h1 class="Aquatico-Regular font-36 about-title text-uppercase wow slideInRight">
-                OUR MISSION
-            </h1>
-            <div class="space-15"></div>
-            <article class="wow slideInRight">
-                <p class="LinotteLight font-14 text-color about-texts">
-                    The goal of <strong>Syfte is to make your ideas and goals become true</strong>, help you create successful businesses through a work plan that we discuss with each client, each service we offer is a fundamental pillar that we transform
-                    into <strong>optimal experience and combining it with marketing strategies</strong>, it translates into Smart Websites and Apps.
-                </p>
-                <div class="space-50"></div>
-                <div class="col-sm text-center">
-                    <img class="offset-md-2 offset-lg-4 wow bounceInRight" src="./assets/images/tablet/employer.png" alt="Branding creator">
-                </div>
-            </article>
-        </div>
-    </div>
-    <!-- what we do tablet -->
-    <section style="margin-top: -10em">
-        <div class="container">
+            <div class="space-200 d-none d-md-block"></div>
+            <div class="space-100 d-none d-md-block"></div>
+            <div class="space-60 d-md-none"></div>
             <div class="row">
-                <div class="col-md-10 offset-md-1 text-center">
-                    <h1 class="Aquatico-Regular font-36 about-title text-uppercase wow slideInLeft">
+                <div class="col-sm text-center offset-lg-1 d-none d-md-block">
+                    <h1 class="LinotteRegular font-65 about-title text-uppercase wow slideInRight">
+                        OUR MISSION
+                    </h1>
+                    <article class="wow slideInLeft">
+                        <p class="LinotteLight font-20 text-color about-texts">
+                            The goal of <strong>Syfte is to make your ideas and goals become true</strong>, help you create successful businesses through a work plan that we discuss with each client, each service we offer is a fundamental pillar that
+                            we transform into <strong>optimal experience and combining it with marketing strategies</strong>, it translates into Smart Websites and Apps.
+                        </p>
+                    </article>
+                </div>
+                <div class="col-sm text-center offset-lg-1 d-md-none">
+                    <h1 class="LinotteRegular font-32 about-title text-uppercase wow slideInRight">
+                        OUR MISSION
+                    </h1>
+                    <article class="wow slideInLeft">
+                        <p class="LinotteLight font-16 text-color about-texts">
+                            The goal of <strong>Syfte is to make your ideas and goals become true</strong>, help you create successful businesses through a work plan that we discuss with each client, each service we offer is a fundamental pillar that
+                            we transform into <strong>optimal experience and combining it with marketing strategies</strong>, it translates into Smart Websites and Apps.
+                        </p>
+                    </article>
+                    <div class="space-50 d-md-none"></div>
+                </div>
+                <div class="col-sm text-left offset-lg-2 wow slideInRight">
+                    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <h1 class="text-center LinotteRegular about-texts">Carlos Estarita</h1>
+                                <h5 class="text-center LinotteRegular about-texts">Founder & CEO</h5>
+                                <div class="space-20"></div>
+                                <img src="./assets/images/desktop/carlos.png" class="d-block w-100" alt="Marketing-CEO">
+                            </div>
+                            <div class="carousel-item">
+                                <h1 class="text-center LinotteRegular about-texts">Maiky Sanchéz</h1>
+                                <h5 class="text-center LinotteRegular about-texts">Co-founder & Vicepresident</h5>
+                                <div class="space-20"></div>
+                                <img src="./assets/images/desktop/maiky.png" class="d-block w-100" alt="Co-founder">
+                            </div>
+                            <div class="carousel-item">
+                                <h1 class="text-center LinotteRegular about-texts">Pablo Vásquez</h1>
+                                <h5 class="text-center LinotteRegular about-texts">Graphic Designer</h5>
+                                <div class="space-20"></div>
+                                <img src="./assets/images/desktop/pablo.png" class="d-block w-100" alt="Designer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space-200 d-none d-md-block"></div>
+            <div class="space-80 d-md-none"></div>
+            <div class="row">
+                <div class="col-sm text-center d-none d-md-block">
+                    <h1 class="LinotteRegular font-65 about-title text-uppercase wow slideInRight">
                         What do <br> we do?
                     </h1>
-                    <div class="space-10"></div>
-                    <article class="text-center wow slideInLeft">
-                        <p class="LinotteLight font-16 text-color about-texts">
+                    <article class="wow slideInUp">
+                        <p class="LinotteLight font-20 text-color about-texts">
                             <strong>In Syfte we combine all the tools into one to create solid foundations for each business</strong>, we start with meetings by zoom to explore the ideas of the clients and based on that we elaborate a <strong>plan of branding (brand) and visual design</strong>,
                             we them take it to <strong>web design, Smart systems and Apps if necessary or requested</strong>. These are the services we offer our consumers.
                         </p>
                     </article>
                 </div>
-            </div>
-            <!-- services -->
-            <div class="space-80"></div>
-            <div class="row hover-hidden">
-                <div class="col-sm">
-                    <img class="about-tablet-dispositives wow slideInLeft" src="./assets/images/tablet/herramientas-02.png" alt="Components of web design">
-                </div>
-                <div style="border-left: 2px solid #cbcac9" class="col-sm text-center offset-md-1 wow slideInRight">
-                    <div class="space-50"></div>
-                    <ul class="tablet-list">
-                        <li>Marketing</li>
-                        <li>UX/UI Design</li>
-                        <li>Backend</li>
-                        <li>App Development</li>
-                        <li>Web Design</li>
-                        <li>Visual Design</li>
-                        <li>Adword & SEO</li>
-                        <li>Branding</li>
-                    </ul>
+                <div class="col-sm text-center d-md-none">
+                    <h1 class="LinotteRegular font-32 about-title text-uppercase wow slideInRight">
+                        What do <br> we do?
+                    </h1>
                 </div>
             </div>
-            <!-- end services -->
-        </div>
-    </section>
-    <!-- end what we do tablet -->
-</section>
-<!-- end slider tablet -->
-<!-- services case -->
-<div class="space-40"></div>
-<div class="container d-none d-xl-block">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xl-5 text-center">
-                <img class="bg-dispositives wow bounceInUp" src="./assets/images/desktop/Herramientas-03.png" alt="Components of web design">
-            </div>
-            <div class="col-sm text-center offset-xl-2 we-do">
-                <h1 class="Aquatico-Regular font-65 about-title text-uppercase wow slideInRight">
-                    What do <br> we do?
-                </h1>
-                <article>
-                    <p class="LinotteLight font-20 text-color about-texts wow slideInRight">
-                        <strong>In Syfte we combine all the tools into one to create solid foundations for each business</strong>, we start with meetings by zoom to explore the ideas of the clients and based on that we elaborate a <strong>plan of branding (brand) and visual design</strong>,
-                        we them take it to <strong>web design, Smart systems and Apps if necessary or requested</strong>. These are the services we offer our consumers.
-                    </p>
-                </article>
-                <div class="space-50"></div>
-                <div style="border-left: 2px solid #cbcac9" class="row wow slideInUp">
+            <div class="space-30"></div>
+            <!-- desktop -->
+            <section class="d-none d-xl-block">
+                <div class="row">
                     <div class="col-sm text-center">
-                        <ul class="services-list">
-                            <li>Marketing</li>
-                            <li>UX/UI Design</li>
-                            <li>Backend</li>
-                            <li>App Development</li>
-                            <li>Web Design</li>
-                            <li>Visual Design</li>
-                            <li>Adword & SEO</li>
-                            <li>Branding</li>
-                        </ul>
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header style="position: relative; left: 5%;" class="offset-xl-1">
+                                <h4 class="LinotteRegular about-title text-center font-22">
+                                    Marketing Plan
+                                </h4>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <figure class="text-center">
+                                    <img class="w-25" alt="Marketing" title="Marketing Plan" src="./assets/images/desktop/about-ico/mark.png" />
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div class="col-sm text-center">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="offset-xl-2 about-ico-mg">
+                                <h4 class="LinotteRegular about-title text-center font-18">
+                                    Marketing Automation
+                                </h4>
+                            </mat-card-header>
+                            <div class="space-15"></div>
+                            <mat-card-content>
+                                <figure class="text-center offset-1">
+                                    <img class="w-25" alt="Marketing-automation" title="Marketing automation" src="./assets/images/desktop/about-ico/automation.png" />
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div class="col-sm text-center">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="offset-xl-2 about-ico-mg">
+                                <h4 class="LinotteRegular about-title text-center font-20">
+                                    CRM & <br> Self Management
+                                </h4>
+                            </mat-card-header>
+                            <div class="space-15"></div>
+                            <mat-card-content>
+                                <figure class="text-center">
+                                    <img class="w-25" alt="CRM" title="CRM" src="./assets/images/desktop/about-ico/CRM.jpg" />
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
                     </div>
                 </div>
+                <div class="space-80"></div>
+                <div class="row">
+                    <div class="col-sm text-center">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header style="position: relative; left: 2%;" class="offset-xl-2">
+                                <h4 class="LinotteRegular about-title text-center font-20">Landing Pages</h4>
+                            </mat-card-header>
+                            <div class="space-15"></div>
+                            <mat-card-content>
+                                <figure class="text-center">
+                                    <img class="w-25" src="./assets/images/desktop/about-ico/web.png" title="Landing Pages" alt="Landing Pages">
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div class="col-sm text-center">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="offset-xl-2 about-ico-mg">
+                                <h4 class="LinotteRegular about-title text-center font-20">
+                                    Visual identity
+                                </h4>
+                            </mat-card-header>
+                            <div class="space-15"></div>
+                            <mat-card-content>
+                                <figure class="text-center">
+                                    <img class="w-25" src="./assets/images/desktop/about-ico/visual.png" title="Visual identity" alt="identidad-visual">
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div class="col-sm text-center">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="offset-xl-3 about-ico-mg">
+                                <h4 class="LinotteRegular about-title text-center font-20">
+                                    Online ads
+                                </h4>
+                            </mat-card-header>
+                            <div class="space-15"></div>
+                            <mat-card-content>
+                                <figure class="text-center">
+                                    <img class="w-25" src="./assets/images/desktop/about-ico/SEO.png" title="ads" alt="ads">
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                </div>
+                <div class="space-80"></div>
+                <div class="row">
+                    <div class="col-sm text-center">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="offset-xl-3">
+                                <h4 class="LinotteRegular about-title text-center font-20">Branding</h4>
+                            </mat-card-header>
+                            <div class="space-15"></div>
+                            <mat-card-content>
+                                <figure class="text-center">
+                                    <img class="w-25" src="./assets/images/desktop/about-ico/brand.png" title="Branding" alt="Branding">
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div class="col-sm text-center">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="offset-xl-2">
+                                <h4 class="LinotteRegular about-title text-center font-20">
+                                    Apps Development
+                                </h4>
+                            </mat-card-header>
+                            <div class="space-15"></div>
+                            <mat-card-content>
+                                <figure class="text-center">
+                                    <img class="w-25" alt="Apps-development" title="Apps" src="./assets/images/desktop/about-ico/APP.jpg" />
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div class="col-sm text-center">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header style="position: relative; left: 3%;" class="offset-xl-1">
+                                <h4 class="LinotteRegular about-title text-center font-20">
+                                    Monthly metrics
+                                </h4>
+                            </mat-card-header>
+                            <div class="space-15"></div>
+                            <mat-card-content>
+                                <figure class="text-center">
+                                    <img class="w-25" src="./assets/images/desktop/about-ico/analytics.png" title="ads" alt="ads-analytics">
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                </div>
+            </section>
+            <!-- end desktop -->
+            <!-- tablet -->
+            <section class="d-none d-md-block d-xl-none">
+                <div class="row">
+                    <div class="col-sm text-center">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="offset-md-1">
+                                <h4 class="LinotteRegular about-title text-center font-22">
+                                    Marketing Plan
+                                </h4>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <figure class="text-center">
+                                    <img class="w-50 offset-md-4" alt="Marketing" title="Marketing Plan" src="./assets/images/desktop/about-ico/mark.png" />
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div class="col-sm text-center">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="offset-md-2 about-ico-mg">
+                                <h4 class="LinotteRegular about-title text-center font-18">
+                                    Marketing Automation
+                                </h4>
+                            </mat-card-header>
+                            <div class="space-15"></div>
+                            <mat-card-content>
+                                <figure class="text-center offset-1">
+                                    <img class="w-50 offset-md-4" alt="Marketing-automation" title="Marketing automation" src="./assets/images/desktop/about-ico/automation.png" />
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div class="col-sm text-center">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="offset-md-2 about-ico-mg">
+                                <h4 class="LinotteRegular about-title text-center font-20">
+                                    CRM & <br> Self Management
+                                </h4>
+                            </mat-card-header>
+                            <div class="space-15"></div>
+                            <mat-card-content>
+                                <figure class="text-center">
+                                    <img class="w-50 offset-md-4" alt="CRM" title="CRM" src="./assets/images/desktop/about-ico/CRM.jpg" />
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                </div>
+                <div class="space-50"></div>
+                <div class="row">
+                    <div class="col-sm text-center">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="offset-md-2">
+                                <h4 class="LinotteRegular about-title text-center font-20">Landing Pages</h4>
+                            </mat-card-header>
+                            <div class="space-15"></div>
+                            <mat-card-content>
+                                <figure class="text-center">
+                                    <img class="w-50 offset-md-4" src="./assets/images/desktop/about-ico/web.png" title="Landing Pages" alt="Landing Pages">
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div class="col-sm text-center">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="offset-md-2 about-ico-mg">
+                                <h4 class="LinotteRegular about-title text-center font-20">
+                                    Visual identity
+                                </h4>
+                            </mat-card-header>
+                            <div class="space-15"></div>
+                            <mat-card-content>
+                                <figure class="text-center">
+                                    <img class="w-50 offset-md-4" src="./assets/images/desktop/about-ico/visual.png" title="Visual identity" alt="identidad-visual">
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div class="col-sm text-center">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="offset-md-2 about-ico-mg">
+                                <h4 class="LinotteRegular about-title text-center font-20">
+                                    Online ads
+                                </h4>
+                            </mat-card-header>
+                            <div class="space-15"></div>
+                            <mat-card-content>
+                                <figure class="text-center">
+                                    <img class="w-50 offset-md-4" src="./assets/images/desktop/about-ico/SEO.png" title="ads" alt="ads">
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                </div>
+                <div class="space-50"></div>
+                <div class="row">
+                    <div class="col-sm text-center">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="offset-md-2">
+                                <h4 class="LinotteRegular about-title text-center font-20">Branding</h4>
+                            </mat-card-header>
+                            <div class="space-15"></div>
+                            <mat-card-content>
+                                <figure class="text-center">
+                                    <img class="w-50 offset-md-4" src="./assets/images/desktop/about-ico/brand.png" title="Branding" alt="Branding">
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div class="col-sm text-center">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="offset-md-2">
+                                <h4 class="LinotteRegular about-title text-center font-20">
+                                    Apps Development
+                                </h4>
+                            </mat-card-header>
+                            <div class="space-15"></div>
+                            <mat-card-content>
+                                <figure class="text-center">
+                                    <img class="w-50 offset-md-4" alt="Apps-development" title="Apps" src="./assets/images/desktop/about-ico/APP.jpg" />
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div class="col-sm text-center">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="offset-md-2">
+                                <h4 class="LinotteRegular about-title text-center font-20">
+                                    Monthly metrics
+                                </h4>
+                            </mat-card-header>
+                            <div class="space-15"></div>
+                            <mat-card-content>
+                                <figure class="text-center">
+                                    <img class="w-50 offset-md-4" src="./assets/images/desktop/about-ico/analytics.png" title="ads" alt="ads-analytics">
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                </div>
+            </section>
+            <!-- end tablet -->
+            <!-- mobile -->
+            <section class="d-md-none">
+                <div class="row center-icos-320">
+                    <div class="col">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="icos-header-320">
+                                <h4 class="LinotteRegular about-title font-14 text-center">
+                                    Marketing <br> Plan
+                                </h4>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <figure>
+                                    <img class="img-thumbnail no-border bg-card-dark" alt="Marketing" title="Marketing Plan" src="./assets/images/desktop/about-ico/mark.png" />
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                        <div class="space-40"></div>
+                    </div>
+                    <div class="col">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="icos-header-320">
+                                <h4 class="LinotteRegular about-title font-14 text-center">
+                                    Marketing <br> Automation
+                                </h4>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <figure>
+                                    <img class="img-thumbnail no-border bg-card-dark offset-1" alt="Marketing-automation" title="Marketing-automation" src="./assets/images/desktop/about-ico/automation.png" />
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                        <div class="space-40"></div>
+                    </div>
+                </div>
+                <div class="row center-icos-320">
+                    <div class="col">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="icos-header-320">
+                                <h4 class="LinotteRegular about-title font-14 text-center">
+                                    Visual <br> identity
+                                </h4>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <figure>
+                                    <img class="img-thumbnail no-border bg-card-dark" alt="identidad-visual" title="identidad-visual" src="./assets/images/desktop/about-ico/visual.png" />
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                        <div class="space-40"></div>
+                    </div>
+                    <div class="col">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="icos-header-320">
+                                <h4 class="LinotteRegular about-title font-14 text-center">
+                                    Online <br> Ads
+                                </h4>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <figure>
+                                    <img class="img-thumbnail no-border bg-card-dark offset-1" alt="ads" title="Online ads" src="./assets/images/desktop/about-ico/SEO.png" />
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                        <div class="space-40"></div>
+                    </div>
+                </div>
+                <div class="row center-icos-320">
+                    <div class="col">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="icos-header-320">
+                                <h4 class="LinotteRegular about-title font-14 text-center">
+                                    CRM & <br> Self Management
+                                </h4>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <figure>
+                                    <img class="img-thumbnail no-border bg-card-dark" alt="CRM" title="CRM" src="./assets/images/desktop/about-ico/CRM.jpg" />
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                        <div class="space-40"></div>
+                    </div>
+                    <div class="col">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="icos-header-320">
+                                <h4 class="LinotteRegular about-title font-14 text-center">
+                                    Landing <br> Pages
+                                </h4>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <figure>
+                                    <img class="img-thumbnail no-border bg-card-dark offset-1" alt="Landing-Pages" title="Landing Pages" src="./assets/images/desktop/about-ico/web.png" />
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                        <div class="space-40"></div>
+                    </div>
+                </div>
+                <div class="row center-icos-320">
+                    <div class="col">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="icos-header-320">
+                                <h4 class="LinotteRegular about-title font-14 text-center">
+                                    Branding
+                                </h4>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <figure>
+                                    <img class="img-thumbnail no-border bg-card-dark" alt="Branding" title="Branding" src="./assets/images/desktop/about-ico/brand.png" />
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                        <div class="space-40"></div>
+                    </div>
+                    <div class="col">
+                        <mat-card class="bg-card-dark">
+                            <mat-card-header class="icos-header-320">
+                                <h4 class="LinotteRegular about-title font-14 text-center">
+                                    Apps <br> development
+                                </h4>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <figure>
+                                    <img class="img-thumbnail no-border bg-card-dark offset-1" alt="Apps-development" title="Aplicaciones móviles" src="./assets/images/desktop/about-ico/APP.jpg" />
+                                </figure>
+                            </mat-card-content>
+                        </mat-card>
+                        <div class="space-40"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- end mobile -->
+            <!-- CTA -->
+            <div class="space-30"></div>
+            <div class="row text-center">
+                <div class="col-sm">
+                    <button onclick="location.href = 'https://www.syftedesigns.com/campaign/services'" mat-raised-button class="btn-block LinotteRegular font-14 text-bold col-md-5 col-xl-4">
+                        Explore more
+                    </button>
+                </div>
             </div>
-        </div>
+            <!-- end CTA-->
+        </section>
+        <!-- End Desktop -->
     </div>
 </div>
-<!-- end services case -->
-<!-- mobile -->
-<section class="d-md-none">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h1 class="Aquatico-Regular font-45 about-title text-uppercase wow slideInLeft">
-                    What is <br>syfte?
-                </h1>
-                <div class="space-10"></div>
-                <article>
-                    <p class="LinotteLight font-20 text-color about-texts wow slideInLeft">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-                        sem.
-                    </p>
-                    <div class="space-10"></div>
-                    <img class="wow slideInLeft" src="./assets/images/mobile/mobile-employer.png" alt="Branding creator">
-                </article>
-            </div>
-            <div class="col-12 text-center">
-                <div class="space-20"></div>
-                <h1 class="Aquatico-Regular font-45 about-title text-uppercase wow slideInUp">
-                    Our Mission
-                </h1>
-                <div class="space-10"></div>
-                <article class="wow slideInUp">
-                    <p class="LinotteLight font-20 text-color about-texts">
-                        The goal of <strong>Syfte is to make your ideas and goals become true</strong>, help you create successful businesses through a work plan that we discuss with each client, each service we offer is a fundamental pillar that we transform
-                        into <strong>optimal experience and combining it with marketing strategies</strong>, it translates into Smart Websites and Apps.
-                    </p>
-                </article>
-            </div>
-        </div>
-        <!-- slider -->
-        <div class="space-40"></div>
-        <div style="margin-left: 0.5em" class="row">
-            <div class="col text-center hover-hidden wow slideInUp">
-                <img class="circle-slider" src="./assets/images/mobile/personaje-2-02.png" alt="Cooperative component of our agency">
-                <div id="carouselMobile" class="carousel slide carousel-fade slider-position" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="./assets/images/desktop/carlos.png" class="d-block img-slider" alt="CEO of our agency">
-                            <div class="carousel-caption d-md-none slider-label">
-                                <h1 class="font-25 Gotham-Book about-title">Carlos Estarita</h1>
-                                <h5 class="font-18 LinotteRegular about-title">CEO & Project Manager</h5>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./assets/images/desktop/maiky.png" class="d-block img-slider" alt="Leader of marketing strategies">
-                            <div class="carousel-caption d-md-none slider-label">
-                                <h1 class="font-25 Gotham-Book about-title">Maiky Sanchez</h1>
-                                <h5 class="font-18 LinotteRegular about-title">Co-Founder</h5>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./assets/images/desktop/pablo.png" class="d-block img-slider" alt="Creative Web Designer">
-                            <div class="carousel-caption d-md-none slider-label">
-                                <h1 class="font-25 Gotham-Book about-title">Pablo Vasquez</h1>
-                                <h5 class="font-18 LinotteRegular about-title">Graphic Designer</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselMobile" role="button" data-slide="prev">
-                        <img src="./assets/images/mobile/flecha-02.png" alt="Change patner">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- end slider -->
-        <!-- we do -->
-        <div style="margin-top: -20%" class="row">
-            <div class="col text-center">
-                <h1 class="Aquatico-Regular font-45 about-title text-uppercase wow slideInUp">
-                    What do <br> we do?
-                </h1>
-                <div class="space-30"></div>
-                <article>
-                    <p class="LinotteLight font-20 text-color about-texts wow slideInUp">
-                        <strong>In Syfte we combine all the tools into one to create solid foundations for each business</strong>, we start with meetings by zoom to explore the ideas of the clients and based on that we elaborate a <strong>plan of branding (brand) and visual design</strong>,
-                        we them take it to <strong>web design, Smart systems and Apps if necessary or requested</strong>. These are the services we offer our consumers.
-                    </p>
-                    <div class="space-40"></div>
-                    <ul class="services-list services-mg WOW slideInUp">
-                        <li>Marketing</li>
-                        <li>UX/UI Design</li>
-                        <li>Backend</li>
-                        <li>App Development</li>
-                        <li>Web Design</li>
-                        <li>Visual Design</li>
-                        <li>Adword & SEO</li>
-                        <li>Branding</li>
-                    </ul>
-                    <img class="wow slideInUp" src="./assets/images/mobile/herramientas-02.png" alt="Components of web design">
-                </article>
-            </div>
-        </div>
-        <!-- end we do-->
-    </div>
-</section>
-<!-- end mobile -->
-<div class="space-150 d-none d-md-block"></div>

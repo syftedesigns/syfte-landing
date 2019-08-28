@@ -1,0 +1,79 @@
+<div class="row">
+    <video id="video-bg" autoplay loop muted>
+          <source src="./assets/images/desktop/video-bg-smoke.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+  </video>
+    <div class="container-fluid video-container">
+        <div class="space-200"></div>
+        <div class="row">
+            <div class="col-sm text-center">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <h1 class="text-white Aquatico-Regular font-20 d-md-none">Digital Consulting</h1>
+                            <h1 class="text-white Aquatico-Regular font-50 d-none d-md-block">Digital Consulting</h1>
+                            <article>
+                                <p class="text-slider LinotteRegular font-22 text-bold d-none d-md-block">
+                                    Join our digital consulting program, where a specialist <br> will help you define your goals and recommend the best channels to connect with your audience.
+                                </p>
+                                <p class="text-slider LinotteRegular font-14 text-bold d-md-none">
+                                    Join our digital consulting program, where a specialist <br> will help you define your goals and recommend the best channels to connect with your audience.
+                                </p>
+                                <div class="col-sm">
+                                    <button onclick="location.href = 'https://www.syftedesigns.com/campaign/es/marketing'" class="text-bold LinotteRegular" mat-raised-button color="primary">Read more</button>
+                                    <button [routerLink]="['/contacto']" class="text-bold LinotteRegular" style="margin-left: 1em" mat-raised-button>Contact us</button>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="carousel-item">
+                            <h1 class="text-white Aquatico-Regular font-20 d-md-none">Be part of our TechCamp.</h1>
+                            <h1 class="text-white Aquatico-Regular font-50 d-none d-md-block">Be part of our TechCamp.</h1>
+                            <article>
+                                <p class="text-slider LinotteRegular font-22 text-bold d-none d-md-block">
+                                    Offer your audience a memorable experience,<br> with automated tools integrated by our #DeveloperTeam.
+                                </p>
+                                <p class="text-slider LinotteRegular font-14 text-bold d-md-none">
+                                    Offer your audience a memorable experience,<br> with automated tools integrated by our #DeveloperTeam.
+                                </p>
+                                <div class="col-sm">
+                                    <button onclick="location.href = 'https://www.syftedesigns.com/campaign/es/website'" class="text-bold LinotteRegular" mat-raised-button>Read more</button>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="carousel-item">
+                            <h1 class="text-white Aquatico-Regular font-50 d-none d-md-block">
+                                We help you <br> sell more.
+                            </h1>
+                            <h1 class="text-white Aquatico-Regular font-20 d-md-none">
+                                We help you <br> sell more.
+                            </h1>
+                            <article>
+                                <p class="text-slider LinotteRegular font-22 text-bold d-none d-md-block">
+                                    We create a marketing plan and integrate it into digital sales channels, <br> based on demographic studies to reach your BuyerPerson.
+                                </p>
+                                <p class="text-slider LinotteRegular font-14 text-bold d-md-none">
+                                    We create a marketing plan and integrate it into digital sales channels, based on demographic studies to reach your BuyerPerson.
+                                </p>
+                                <div class="col-sm">
+                                    <button onclick="location.href = 'https://www.syftedesigns.com/campaign/es/marketing'" class="text-bold LinotteRegular" mat-raised-button>Read more</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev d-none d-md-block" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next d-none d-md-block" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="space-200 d-none d-md-block"></div>
+        <!-- Mobile autoplay invisible -->
+        <button (click)="startVideo();" id="playVideo" style="opacity: 0; z-index: -1;">start</button>
+        <!-- end Mobile Autoplay -->
+    </div>
+</div>

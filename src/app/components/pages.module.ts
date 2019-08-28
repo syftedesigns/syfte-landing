@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { PageRoutingModule } from './pages.routes';
 import { AngularMaterialModule } from '../angular-material.module';
 import { FormSendComponent } from './form-send/form-send.component';
+import { PolicyComponent } from './policy/policy.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -24,7 +25,8 @@ import { FormSendComponent } from './form-send/form-send.component';
     CasesComponent,
     ContactComponent,
     HomeComponent,
-    FormSendComponent
+    FormSendComponent,
+    PolicyComponent
   ]
 })
 export class PagesModule { }
